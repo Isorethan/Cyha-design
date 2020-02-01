@@ -1,0 +1,172 @@
+ #about-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-description-about, #nav-content {
+    text-transform: uppercase;
+}
+#nav-content ul{
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+    margin: 15px 0 10px 0;   
+    display: flex;
+}
+
+#nav-content a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+#nav-content a:active{
+    border-bottom: 1px solid black;
+}
+
+.description-div-bloc{
+    margin: 25px 0 55px 0;
+    padding: 0 15px 0 15px;
+}
+#about, #demarche {
+    text-align: right;
+}
+.title-description-about {
+    border-bottom: 1px solid black;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin: 25px 0 35px 0;
+}
+
+.description-div-bloc p {
+    line-height: 25px;
+    margin-top: 20px;
+}
+#about, #histoire {
+    position: relative;
+}
+.horizontal-separator div {
+    width: 100%;
+    height: 100%;
+}
+.dotes-separator {
+    transform: rotate(-45deg);
+}
+
+.horizontal-separator {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(103, 124, 167, 44%);
+    display: flex;
+    justify-content: center;
+    transform: rotate(45deg);
+    text-align: center;
+    position: absolute;
+    left: calc(50% - 75px);
+    
+}
+
+#about-main hr {
+    display:none
+}
+
+
+@media (min-width: 640px) {
+    #nav-content ul{
+        font-size: 1.5rem;
+
+    }
+    .description-div-bloc p {
+        font-size: 1.5rem;
+    }
+    .title-description-about {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (min-width:1024px) {
+   .description-div-bloc {
+       width: 50%;
+       color: white;
+       padding: 50px 0 50px 0;
+       margin: 0;
+    }
+   #histoire {
+       align-self: flex-end;
+   }
+   .horizontal-separator {
+       display: none;
+   }
+   #nav-content {
+       margin : 50px 0 50px 0;
+
+   }
+
+   #nav-content li {
+       font-size: 2rem;
+   }
+   .description-div-bloc p {
+    text-align: justify;
+    line-height: 45px;
+    padding: 0  45px 75px 45px;
+
+}
+ .title-description-about{
+    padding : 30px 0 30px 0;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+#about, #histoire, #demarche {
+    position: relative;
+}
+#about {
+    background-color: rgba(90, 118, 174, 44%);
+}
+#about::after {
+    content: "";
+    background-image: url(../assets/img/pilecoussin_01.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+#histoire {
+    background-color: rgba(37, 126, 133, 61%);
+}
+#histoire::after {
+    content: "";
+    background-image: url(../assets/img/pilecoussin_01.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+#demarche {
+    background-color: rgba(107, 107, 107, 63%);
+}
+#demarche::after {
+    content: "";
+    background-image: url(../assets/img/pilecoussin_01.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#about-main hr {
+    display: block;
+    background-color: white;
+    height: 2px;
+    width: 95%;    
+    margin: 0 auto;   
+    border:0px;
+}
+}

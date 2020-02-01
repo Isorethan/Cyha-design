@@ -1,0 +1,30 @@
+.single-article  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.single-article > * {
+    text-align: center;
+    max-width: 90%;
+}
+.single-article img {
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+@media (min-width:1024px) { 
+
+    .single-article > * {
+        text-align: center;
+        max-width: 1060px;
+    }
+
+}
+
+

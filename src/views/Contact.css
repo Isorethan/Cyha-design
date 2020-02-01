@@ -1,0 +1,124 @@
+#contact-shop-info {
+    background-image: url(../assets/img/ameublement_07.jpg);
+    background-size: cover;
+    width: 100%;
+}
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+#contact-shop-info {
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+
+}
+
+#overlay-horaire-shop {
+    background-color: rgba(37, 126, 123, 0.8);
+    
+    width: 75%;
+    height: 170px;
+    border-radius: 10px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.horaire-shop{
+    font-size: 1.2rem;
+    color: whitesmoke;
+    text-align: center;
+    line-height: 25px;
+    align-self: center;
+}
+
+
+.postal-geo-info {
+    border: 1px solid black;
+    padding: 10px;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    background-color: whitesmoke;
+
+    margin-bottom: 25px;
+}
+
+
+#map {
+    position: relative;
+    width: 85%;
+    height: 275px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+
+
+/* MEDIA 640        */
+
+@media (min-width: 640px) {
+    #contact-shop-info {
+        height: 430px;
+        margin-bottom: 50px;
+    }
+    
+    .horaire-shop{
+        font-size: 2rem;
+        line-height: 35px;
+        
+    }
+    #overlay-horaire-shop {
+        height: 250px;
+    }
+
+    .postal-geo-info {
+        font-size: 1.8rem;
+        margin-bottom: 55px;
+    }
+
+    #map {
+        height: 420px;
+        margin-bottom: 55px;
+        position: relative;
+    }
+   
+}
+
+
+/* MEDIA 1024        */
+@media (min-width: 1024px) {
+    #contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contact-shop-info {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        width: 50%;
+        clip-path: polygon(0% 0%, 75% 0%, 100% 45%, 75% 100%, 0% 100%);
+
+    }
+
+    #contact-geo-info {
+        width: 50%;
+    }
+    
+    #map {
+        height: 550px ;
+        position: relative;
+    }
+}

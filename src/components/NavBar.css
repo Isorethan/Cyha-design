@@ -1,0 +1,313 @@
+.main-nav {
+    display: none;
+    position:fixed;
+    width: 100vw;
+    background-image: url(../assets/img/black-wooden-plank.jpg);
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Lato';
+    
+   
+}
+
+
+.open {
+    display: flex;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+
+.nav-list::after   {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    opacity: .1 ;
+    top: 0;
+    /* z-index: 0; */
+   
+}
+
+
+.nav-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+   
+   
+    
+}
+
+.nav-item.active {
+    text-decoration: underline;
+}
+
+.nav-item {
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+    font-size: 32px;
+    cursor: pointer;
+    font-weight: 400;
+    color: white;
+    opacity: 0;
+    animation: fadeIn .8s ease-in-out forwards;
+    height: fit-content;
+   
+
+}
+
+
+
+.nav-list a {
+    width: fit-content;
+    align-self: center;
+    
+}
+
+.nav-list *+* {
+    margin-top: 3rem;
+}
+
+.toggle-button {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    width:50px ;
+    height: 50px;
+    justify-content: space-around;
+    background-color: transparent;
+    border: none;
+    margin-left: auto;
+    margin-right: 5px;
+    outline: none;
+    align-items: center;
+    align-self: center;
+}
+
+.toggle-button__line {
+    width: 43px;
+    height: 5px;
+    background-color: white ;
+    transition: .6s ease-in-out;
+    border-radius: 5px;
+}
+.croix {
+    position: relative;
+   display: flex;
+   justify-content: center;
+
+  
+}
+
+.croix .toggle-button__line:nth-child(1) {
+    position: absolute;
+    /* background-color: black; */
+    transform: rotate(45deg);
+    transition: .6s ease-in-out;
+   
+}
+.croix .toggle-button__line:nth-child(2) {
+    position: absolute;
+    /* background-color: black; */
+    transform: rotate(-45deg);
+    transition: .6s ease-in-out;
+}
+.croix .toggle-button__line:nth-child(3) {
+    position: absolute;
+    /* background-color: black; */
+    transform: rotate(-45deg);
+    transition: .6s ease-in-out;
+}
+
+
+.tel-nav {
+    color:  white;
+    font-size: 1.8rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.nav-top-tel {
+    display: none;
+}
+
+
+
+@media (min-width:1024px) { 
+    .toggle-button__line {
+        width: 43px;
+        height: 5px;
+        background-color: white ;
+        transition: .6s ease-in-out;
+    }
+  
+    .croix .toggle-button__line:nth-child(1) { 
+        background-color: white ;
+    }
+    .croix .toggle-button__line:nth-child(2) {
+        background-color: white ;
+     }
+    .croix .toggle-button__line:nth-child(3) { 
+        background-color: white ;
+    }
+
+    .nav-top-tel {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        position:absolute;
+        width: fit-content;
+        background-image: none;
+        height: fit-content;
+        right: 70px;
+        opacity: 0;
+        pointer-events: none;
+        align-self: center;
+        transform: translateX(90px);
+        transition: all 0.5s ease-in-out;
+       
+       
+    }
+    
+    
+    .open {
+        display: block;
+        position:absolute;
+        z-index: 1;
+        align-self: center;
+        opacity: 1;
+        pointer-events: all;
+        /* animation: fadeInTranslate .8s ease-in-out forwards ; */
+        transform: translateX(0);
+        transition: all 0.5s ease-in-out;
+    }
+    
+    
+    
+    .nav-list::after   {
+        display: none;
+    }
+    
+    
+    .nav-list {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: fit-content;   
+    }
+    
+
+    .nav-item {
+        position: relative;
+        width: fit-content;
+        z-index:1;
+        font-size: 26px;
+        font-family: "Segoe UI";
+        cursor: pointer;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        opacity: 0;
+        animation: fadeInTranslate .8s ease-in-out forwards;
+        height: fit-content;
+       padding: 2px 5px;
+    
+    }
+    
+    .nav-list a {
+        width:fit-content;
+        height: fit-content;
+        align-self: auto; 
+    }
+    
+    .nav-list *+* {
+        margin: 0;
+    }
+
+    .tel-nav {
+       display: none;
+    }
+
+    .active {
+        text-decoration: underline;
+        color: white;
+    }
+
+
+}
+
+
+@media (min-width:1200px) {
+
+    .nav-top-tel {
+        display: block;
+        align-self: center;
+        font-size: 32px;
+        color: white;
+        font-weight: 400;
+        font-family: "Segoe UI";
+    }
+
+    .nav-item {
+        font-size: 26px;
+    }
+
+    .nav-list *+* {
+        margin:0.2rem;
+    }
+
+}
+
+@media (min-width:1400px) {
+
+    .nav-top-tel {
+        display: block;
+        align-self: center;
+        font-size: 32px;
+        color: white;
+        font-weight: 400;
+        font-family: "Segoe UI";
+    }
+
+    .nav-item {
+        font-size: 30px;
+    }
+
+    .nav-list *+* {
+        margin:0.55rem;
+    }
+
+}
+
+
+
+
+@keyframes fadeIn {
+
+    from {
+opacity: 0;
+    }to {
+opacity: 1;
+    }
+}
+@keyframes fadeInTranslate {
+
+    from {
+        transform: translateX(90px);
+opacity: 0;
+    }to {
+        transform: translateX(0);
+opacity: 1;
+    }
+}
