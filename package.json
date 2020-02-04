@@ -1,14 +1,14 @@
 {
-    "name": "cyha-design",
+    "name": "cyha_design",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@devloco/react-scripts-wptheme": "3.2.0-wp.2",
+        "@devloco/react-scripts-wptheme": "^3.3.0-wp.11",
         "google-maps-react": "^2.0.2",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-helmet": "^5.2.1",
-        "react-images": "^1.0.0",
+        "react-images": "^1.1.0-beta.3",
         "react-photo-gallery": "^8.0.0",
         "react-router-dom": "^5.1.2",
         "webfontloader": "^1.6.28",
@@ -39,6 +39,6 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "/wp-content/themes/cyha-design",
-    "browserLaunchTo": "http://cyha-designv02.test"
+    "homepage": "/wp-content/themes/cyha_design",
+    "browserLaunchTo": "http://cyhadesign.com"
 }

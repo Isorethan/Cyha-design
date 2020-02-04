@@ -150,6 +150,7 @@
     .atelier-description {
         margin-top: 55px;
         width: 85%;
+        height: auto;
     }
 
     .atelier-title {
@@ -159,6 +160,7 @@
     .atelier-texte {
         font-size: 1.2rem;
         padding: 25px;
+
     }
 
     .img-atelier-bloc {
@@ -242,12 +244,14 @@
 
     .atelier-description {
         width: 60%;
-        height: 450px;
-        padding: 28px;
+        height: auto;
+        padding: 15px;
         text-align: center;
         margin-left: 50px;
         margin-top: 0px;
         border: 1px solid gray;
+        margin-bottom: 15px;
+
     }
 
     .atelier-title  {
@@ -312,6 +316,378 @@
         width: 35%;
     }
 }
+
+@media only screen and (device-width:1024px) {
+    .title-page-atelier {
+        text-align: center;
+    }
+
+    .title-page-atelier::after {
+        width: 100%;
+        left: 0;
+    }
+
+    .bloc-atelier-nav {
+        width: 65%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-item-atelier {
+        font-size: 2rem;
+
+    }
+
+    #atelier-info-bloc{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        padding: 25px;
+    }
+
+    .atelier-description {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .atelier-texte {
+        font-size: 1.5rem;
+    }
+
+    .img-atelier-bloc {
+        position: relative;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .gallerie-btn {
+        left: 35%;
+        top: 10%;
+        font-size: 2rem;
+    }
+
+
+}* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
+
+#atelier-container {
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.title-page-atelier {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding-top: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.title-page-atelier::after {
+    position: absolute;
+    content: "";
+    height: 200px;
+    width: 100%;
+    background-color: rgba(90, 118, 174, 0.6);
+    top: 0;
+    left:0;
+    z-index: -2;
+}
+
+.bloc-atelier-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style-type: none;
+    background-color: white;
+    width: 85%;
+    height: auto;
+    align-items: center;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+
+.nav-item-atelier {
+    margin-bottom: 10px;
+}
+
+.nav-item-atelier {
+    width: 100%;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-item-atelier {
+    color: #32647A;
+    border: 1px solid #227471;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-item-atelier.active {
+    background-color: #257E7B ;
+    color: white;
+
+}
+
+#atelier-info-bloc {
+    display: flex;
+    flex-direction: column;
+}
+
+.atelier-description {
+    background-color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.atelier-title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+}
+
+
+.img-atelier-bloc {
+    width: 100%;
+    height: 220px;
+   margin-top: 10px;
+   position: relative;
+   margin-bottom: 5px;
+}
+
+
+.img-atelier {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.gallerie-btn {
+    background-color: rgba(19, 9, 9, 0.45) ;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    position: absolute;
+    top: 5px;
+    left: 18%;
+}
+
+
+
+
+@media (min-width:640px)  {
+
+    .title-page-atelier {
+        margin-bottom: 25px;
+        font-size: 3rem;
+        margin-top: 5px;
+    }
+
+    .title-page-atelier::after {
+        height: 255px;
+    }
+    
+    .bloc-atelier-nav {
+        width: 60%;
+        padding:15px 25px; 
+    }
+
+    .bloc-atelier-nav:nth-of-type(1n){
+        margin-bottom: 10px;
+    }
+
+    .nav-item-atelier {
+        font-size: 1.8rem;
+    }
+
+    .atelier-description {
+        margin-top: 55px;
+        width: 85%;
+        height: auto;
+    }
+
+    .atelier-title {
+        font-size: 2rem;
+    }
+
+    .atelier-texte {
+        font-size: 1.2rem;
+        padding: 25px;
+
+    }
+
+    .img-atelier-bloc {
+        width: 85%;
+        height: 450px;
+    }
+
+    #atelier-info-bloc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img-atelier-bloc {
+        position: unset;
+        margin-top: 50px;
+    }
+    .gallerie-btn {
+        font-size: 2rem;
+        left: 35%;
+        top: 70%;
+    }
+    
+}
+
+
+@media (min-width:1024px) {
+    #atelier-container {
+        display: flex;
+        flex-direction: column;
+        text-align: unset;
+    }
+    
+    .title-page-atelier{
+        font-size: 3.5rem;
+        font-weight: lighter;
+        margin-bottom: 55px;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    .title-page-atelier::after {
+        height: 320px;
+        width: 120%;
+        top: 0;
+        left:-50%;
+        z-index: -2;
+    }
+
+
+    .bloc-atelier-nav{
+        height: fit-content;
+        width: 50%; 
+        margin-left: 100px;
+        position: relative;
+        z-index: 1000;
+        align-items: center;
+    }
+
+    .nav-item-atelier {
+        font-size: 1.8rem;
+        color: #32647A;
+        border: 1px solid #227471;
+        padding: 10px;
+        width: 80%;
+        border-radius: 20px;
+        text-align: -webkit-center;
+    }
+
+    .nav-item-atelier:hover {
+        background-color: #257E7B ;
+        color: white;
+    }
+
+    #atelier-info-bloc {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+    }
+
+
+    .atelier-description {
+        width: 60%;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+        margin-left: 50px;
+        margin-top: 0px;
+        border: 1px solid gray;
+        margin-bottom: 15px;
+
+    }
+
+    .atelier-title  {
+        font-size: 2rem;
+        margin: 20px 0 20px 0;
+    }
+
+
+    .atelier-texte {
+        font-size: 1.25rem;
+        padding: 15px;
+        text-align: justify;
+        line-height: 28px;
+    }
+
+    .img-atelier-bloc {
+        width: 55%;
+        height: 450px;
+        position: relative;
+        margin: 0px 25px 0 25px;
+    }
+
+    .img-atelier {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 10px;
+    }
+    .gallerie-btn {
+        background-color: rgba(19, 9, 9, 0.45) ;
+        padding: 15px;
+        color: white;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        top: 50%;
+        left: 40%;
+    }
+
+    .gallerie-btn:hover {
+        opacity: 0.8;
+    }
+}
+
+@media (min-width:1800px) {
+    .bloc-atelier-nav {
+        width: 30%;
+        margin-left: 250px;
+    }
+     .title-page-atelier::after {
+         width: 100%;
+     }
+
+     #atelier-info-bloc {
+         justify-content: space-evenly;
+     }
+     .atelier-description {
+         width: 35%;
+         margin:0;
+     }
+
+    .img-atelier-bloc {
+        width: 35%;
+    }
+}
+
 
 @media only screen and (device-width:1024px) {
     .title-page-atelier {

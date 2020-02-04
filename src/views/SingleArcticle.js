@@ -31,14 +31,22 @@ import Image from '../components/Image';
         const date = new Date(article.date);
         return (
             <div className="single-article">
-                    <Image id={article.featured_media} className="vignette-img" size='full'  />
-                    <h1>{article.title.rendered}</h1>
-                    <p>{article.categories}</p>
+                    <Image id={article.featured_media} className="single-article-vignette-img" size='full'  />
+                    {/* <p>{article.categories}</p> */}
+                    <h1 className="single-article-title">{article.title.rendered}</h1>
                     <p>{ `${date.getDay()}/${date.getMonth()+1}/${date.getFullYear()} à ${date.getHours()}:${date.getMinutes()}`}</p>
-                    <div dangerouslySetInnerHTML={{
+
+                <div>
+                <div dangerouslySetInnerHTML={{
+                        
                         __html: article.content.rendered.replace(/<script(.)*<\/script>/gm, '')
                     }}>
                     </div>
+
+                </div>
+                    
+                   
+
             </div>
         )
     }
