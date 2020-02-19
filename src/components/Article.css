@@ -5,30 +5,6 @@
 
 
 
-#actualite-content {
-    width: 100vw;
-    overflow-x: hidden;
-}
-
-#nav-articles {
-    background-color: whitesmoke;
-}
-.nav-list-item {
-    margin: 5px;
-    cursor: pointer;
-}
-#nav-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-transform: uppercase;
-    justify-content: space-evenly;
-    list-style: none;
-    text-decoration: none;
-    margin-bottom: 10px;
-    margin-bottom: 50px;
-}
-
 #vignettes-content {
 flex-direction: row;
 flex-wrap: wrap;
@@ -105,21 +81,6 @@ margin-bottom: 30px;
 
 }
 
-#pagination {
-    display: flex;
-    margin:  0 auto;
-    justify-content: space-evenly;
-    width: fit-content;
-    align-self: center;
- 
-}
-#pagination img {
-    width: 50px;
-}
-
-.page-count{
-    align-self: center;
-}
 
 
 
