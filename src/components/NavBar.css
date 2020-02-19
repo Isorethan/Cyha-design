@@ -100,9 +100,10 @@
     border-radius: 5px;
 }
 .croix {
-    position: relative;
+    position: fixed;
    display: flex;
    justify-content: center;
+   right: 5px;
 
   
 }
