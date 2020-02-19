@@ -39,6 +39,6 @@
             "last 1 safari version"
         ]
     },
-    "homepage": "/wp-content/themes/cyha-design",
-    "browserLaunchTo": "http://cyha-designv02.test"
+    "homepage": "/wp-content/themes/cyha-design/",
+    "browserLaunchTo": "http://cyha-design.test/"
 }

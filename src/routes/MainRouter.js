@@ -10,6 +10,7 @@ import Blog from '../views/Blog';
 import SingleArcticle from '../views/SingleArcticle';
 import Contact from '../views/Contact';
 import Services from'../views/Services';
+import Error404 from '../views/Error404';
 
 export default class MainRouter extends Component {
 
@@ -72,7 +73,11 @@ render() {
                         <Route exact path="/mentionslegales">
 
                         </Route> 
+                        
 
+                        <Route path="*">
+                            <Error404/>
+                        </Route>
 
                 </Switch>
         </main>

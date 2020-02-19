@@ -20,6 +20,8 @@ export default class Image extends Component{
                         alt: image.alt_text,
                         url: image.media_details.sizes[t.props.size].source_url
                     });
+                } else {
+                    return null ;
                 }
             });
         }

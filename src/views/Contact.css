@@ -50,7 +50,7 @@
     margin: 0 auto;
     position: relative;
     background-color: whitesmoke;
-
+    font-size: 1em;
     margin-bottom: 25px;
 }
 
@@ -107,7 +107,7 @@
         height: auto;
         display: flex;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
         width: 50%;
         clip-path: polygon(0% 0%, 75% 0%, 100% 45%, 75% 100%, 0% 100%);
 
@@ -115,6 +115,10 @@
 
     #contact-geo-info {
         width: 50%;
+    }
+    
+    .postal-geo-info {
+        font-size: 1.6em;
     }
     
     #map {

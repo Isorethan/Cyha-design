@@ -1,4 +1,5 @@
 .footer {
+    position: relative;
     display: flex;
     height: 60px;
     background-image: url(../assets/img/black-wooden-plank.jpg);
@@ -13,8 +14,21 @@
    align-self: center;
 }
 
+.social-media-container > a{
+ width: fit-content;
+}
+
 
 .social-media-item {
     max-height: 100%;
     margin: 0 15px;
+}
+
+.mentions-link {
+    display: block;
+    position: absolute;
+    right: 50%;
+    color: white;
+    align-self: center;
+    width: fit-content;
 }
