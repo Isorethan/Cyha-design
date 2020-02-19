@@ -27,7 +27,7 @@
 .mentions-link {
     display: block;
     position: absolute;
-    right: 50%;
+    right: 25px;
     color: white;
     align-self: center;
     width: fit-content;
