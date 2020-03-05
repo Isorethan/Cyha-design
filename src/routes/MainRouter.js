@@ -17,16 +17,6 @@ export default class MainRouter extends Component {
     state ={
     
    }
-
-
-
-
-
-
-
-
-
-      
     
     
 
