@@ -7,16 +7,16 @@ export default function Contact() {
     return (
         <section id="contact">
 
-<div id="contact-shop-info">
-                <div id="overlay-horaire-shop">
-                    <p className="horaire-shop">
-                        Rendez-nous visite : <br/>
-                        Lundi - Vendredi : 10H - 19H <br/>
-                        Samedi : 10H - 17H
-                    </p>
-                </div>
-               
-            </div>
+            <div id="contact-shop-info">
+                            <div id="overlay-horaire-shop">
+                                <p className="horaire-shop">
+                                    Rendez-nous visite : <br/>
+                                    Lundi - Vendredi : 10H - 19H <br/>
+                                    Samedi : 10H - 17H
+                                </p>
+                            </div>
+                        
+                        </div>
 
 
             <div id="contact-geo-info">

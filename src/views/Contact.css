@@ -101,6 +101,7 @@
     #contact {
         display: flex;
         flex-direction: row;
+        margin: auto auto;
     }
 
     #contact-shop-info {
