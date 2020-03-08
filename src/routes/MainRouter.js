@@ -4,13 +4,14 @@ import Accueil from '../views/Accueil';
 import About from '../views/About';
 import "./MainRouter.css";
 import Atelier from '../views/Atelier';
-import Footer from '../components/Footer';
 import GalleryPhoto from '../views/Gallery';
 import Blog from '../views/Blog';
 import SingleArcticle from '../views/SingleArcticle';
 import Contact from '../views/Contact';
 import Services from'../views/Services';
 import Error404 from '../views/Error404';
+import Footer from '../components/Footer';
+
 
 export default class MainRouter extends Component {
 
@@ -18,10 +19,12 @@ export default class MainRouter extends Component {
     
    }
     
+   
     
 
 render() {
     let { realisations  } = this.state ;
+    
     return (
         <Fragment>
         <main>
@@ -72,6 +75,7 @@ render() {
                 </Switch>
         </main>
         <Footer/>
+        
         </Fragment>
     )
 
