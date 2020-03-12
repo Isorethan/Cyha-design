@@ -3,8 +3,15 @@ import {Link} from "react-router-dom" ;
 import "./Atelier.css" ;
 import img1 from "../assets/img/whiteroom.jpg" ;
 import wp from "../tools/Api" ;
+import Gallery from 'react-photo-gallery';
+import GalleryPhoto from './Gallery';
+
 
 let photos = [] ;
+
+
+
+  
 export default class Atelier extends Component {
     constructor(props){
         super(props);
@@ -13,7 +20,7 @@ export default class Atelier extends Component {
             realisations:null,
             currentReal:null,
             photos:[],
-            pics: false
+            
         }
 
     }
@@ -28,7 +35,7 @@ if(atelierItems){
 
 
     let t = this ;
-t.setState({pics: false});
+
  let ServiceChoisi = e.target.value ;
  if(ServiceChoisi){
    e.target.classList.add("active")
@@ -42,7 +49,8 @@ t.setState({pics: false});
     }
     // do something with the returned posts                      
         t.setState({
-        currentReal:realisation
+        currentReal:realisation,
+        photos:[]
     })
     
 })
@@ -51,10 +59,12 @@ t.setState({pics: false});
 
  componentDidUpdate(prevProp, prevState) {
     if(prevState.currentReal !== this.state.currentReal) {
-       
+        this.setState({
+            photos:[]
+        })
         let {currentReal} = this.state ;
 
-        (currentReal) && this.getMedia(currentReal.id)
+      this.getMedia(currentReal.id)
         
     }
  }
@@ -63,19 +73,15 @@ t.setState({pics: false});
       
         this.getRealisations();
 
-        window.addEventListener("load", function(event) {
-            console.log("Toutes les ressources sont chargées !");
-            let atelierItems = document.querySelector('.nav-item-atelier')
-            console.log(atelierItems)
-          });
      
-        // atelierItems.classList.add('active')
       
         
     }
 
     getMedia(catId){
-      photos = []
+        
+      
+
         wp.media().param('realisation', [catId]).page(1).perPage(100).get(function( err, data ) {
           if ( err ) {
               // handle err
@@ -83,17 +89,19 @@ t.setState({pics: false});
              data.map((image) =>  
               photos.push({
                   src:image.guid.rendered,
-                  width:1,
-                  height:1,
+                  width:4,
+                  height:3,
                   title:image.title.rendered
 
                 })                   
              )
         })
-         this.setState({
-             photos:photos,
-             pics: true
-         })
+       
+            this.setState({
+                photos:photos
+            })
+         
+       
        
      }
 
@@ -128,7 +136,7 @@ t.setState({pics: false});
 
 
     render() {
-        let {realisations , currentReal,photos, pics} = this.state ;
+        let {realisations , currentReal,photos} = this.state ;
 
 
         return (
@@ -136,50 +144,43 @@ t.setState({pics: false});
 
         <section id="atelier-container">
             
-            <h2 className="title-page-atelier">l' atelier de cyha</h2>
-            <nav className="bloc-atelier-nav">
-                 
-                {  (realisations)? realisations.map((realisation, i)=>
+            <div className="atelier-container-one">      
+        <h2 className="title-page-atelier">l' atelier de cyha</h2>
+        <nav className="bloc-atelier-nav">
+            {  (realisations)? realisations.map((realisation, i)=>
                   
-                    <li key={i} className="nav-item-atelier"  onClick={this.setCurrentReal.bind(this)}  value={realisation.id}>{realisation.name}</li>
-                    
-                 ) :
-                <Fragment>
-                <p className="loading-text">Loading...</p>
-                <div className="spinner">
-                    <div className="cube1"></div>
-                    <div className="cube2"></div>
-                </div>
-                </Fragment>
-                } 
+                <li key={i} className="nav-item-atelier"  onClick={this.setCurrentReal.bind(this)}  value={realisation.id}>{realisation.name}</li>
                 
-              
-            </nav>
-        
-            <div id="atelier-info-bloc">
-                <div className="atelier-description">
-                    <h5 className="atelier-title">confection</h5>
-                    <p className="atelier-texte">
-                        {(currentReal)? currentReal.description :"LOADING" }
-                    </p>
-                </div>
-            
-                <div className="img-atelier-bloc">
-                    <img src={img1} alt="gallerie" className="img-atelier"/>
-                        <div className="access-gallerie-btn">
-                        {(currentReal && pics) ?
-                                <Link 
-                                className="gallerie-btn" 
-                                    to ={{pathname:'/atelier/galerie/'+currentReal.name,
-                                    state:{photos:photos}}}
-                                         >Voir la galerie
-                                </Link>
-                                :"LOADING"}    
-                        </div>
-                </div>
-               
-
+             ) :
+            <Fragment>
+            <p className="loading-text">Loading...</p>
+            <div className="spinner">
+                <div className="cube1"></div>
+                <div className="cube2"></div>
             </div>
+            </Fragment>
+            } 
+        </nav>
+
+        <div id="atelier-info-bloc">
+            <div className="atelier-description">
+                <h5 className="atelier-title">confection</h5>
+                <p className="atelier-texte"> 
+                {(currentReal)? currentReal.description :"LOADING" }
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="galerie-tapisserie" className="atelier-container-two">
+        <div className="img-atelier-bloc">
+           
+           {(photos) ?
+               <GalleryPhoto photos={photos} />
+        
+                  :"LOADING"}  
+         </div>
+    </div>
         </section>
 
         )

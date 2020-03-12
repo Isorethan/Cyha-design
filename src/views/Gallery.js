@@ -10,10 +10,7 @@ const CustomHeader = ({ innerProps, isModal }) => isModal ? (
 let photos
 function GalleryPhoto(props) {
  
-  if (props.location) {
-    photos =props.location.state.photos ;
-  }
-  console.log(photos);
+
   
 
 
@@ -40,13 +37,13 @@ function GalleryPhoto(props) {
 
   return (
     <div className="galerie">
-      <Gallery photos={photos} onClick={openLightbox} />
+      <Gallery photos={props.photos} onClick={openLightbox} />
       <ModalGateway className="galerie-inner" >
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={photos.map(photo => ({
+              views={props.photos.map(photo => ({
                 ...photo,
                 srcset: photo.srcSet,
                 caption: photo.title

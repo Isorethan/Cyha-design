@@ -4,20 +4,33 @@
     padding: 0;
 }
 
-
+#galerie-tapisserie {
+    max-height: 60vh;
+}
 
 #atelier-container {
     justify-content: center;
     text-align: center;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+.atelier-container-one {
+    min-width: 50%;
+}
+#atelier-container >h2 
+{
+    text-align: center;
+}
 .title-page-atelier {
     text-transform: uppercase;
     font-size: 2rem;
+    font-weight: 300;
     padding-top: 15px;
     width: 100%;
     margin-bottom: 15px;
+    color: #113937;
 }
 
 .title-page-atelier::after {
@@ -25,7 +38,7 @@
     content: "";
     height: 200px;
     width: 100%;
-    background-color: rgba(90, 118, 174, 0.6);
+    background-color: rgba(34, 116, 113, 0.6);
     top: 0;
     left:0;
     z-index: -2;
@@ -78,45 +91,49 @@
 }
 
 .atelier-description {
-    background-color: white;
-    padding: 10px;
+    background-color: rgb(116,34,37);
+    padding: 20px 10px;
     margin-top: 20px;
+    margin-bottom: 10px;
+    width: 90%;
+    align-self: center;
+    color: #D5BCBD;
+    
+
 }
 
 .atelier-title {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    margin: 20px 0 10px 0;
+    text-transform: capitalize;
+    font-family: 'Parisienne';
+    font-size: 2rem;
+    font-weight: 300;
 }
 
-
-.img-atelier-bloc {
-    width: 100%;
-    height: 220px;
-   margin-top: 10px;
-   position: relative;
-   margin-bottom: 5px;
+.img-atelier-bloc{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border: 1px solid lightgrey;
+    padding: 6px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    overflow-y: scroll;
+    max-height:100% ;
 }
 
+.atelier-bloc-item {
+    flex: 1 1 250px;
+}
 
-.img-atelier {
+.atelier-bloc-item > img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    object-fit: cover;
 }
 
-.gallerie-btn {
-    background-color: rgba(19, 9, 9, 0.45) ;
-    padding: 10px;
-    text-transform: uppercase;
-    color: white;
-    text-decoration: none;
-    list-style-type: none;
-    border-radius: 10px;
-    font-size: 1.4rem;
-    position: absolute;
-    top: 5px;
-    left: 18%;
+.atelier-container-two {
+    width: 100%;
 }
 
 
@@ -150,6 +167,8 @@
     .atelier-description {
         margin-top: 55px;
         width: 85%;
+        height: auto;
+        margin-bottom: 50px;
     }
 
     .atelier-title {
@@ -159,37 +178,37 @@
     .atelier-texte {
         font-size: 1.2rem;
         padding: 25px;
-    }
 
-    .img-atelier-bloc {
-        width: 85%;
-        height: 450px;
     }
-
     #atelier-info-bloc {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .img-atelier-bloc {
-        position: unset;
-        margin-top: 50px;
+    .nav-item-atelier:hover {
+        background-color: #257E7B ;
+        color: white;
     }
-    .gallerie-btn {
-        font-size: 2rem;
-        left: 35%;
-        top: 70%;
-    }
+   
     
 }
 
 
-@media (min-width:1024px) {
+ @media (min-width:1200px) {
     #atelier-container {
         display: flex;
+        flex-direction: row;
+    }
+
+    .atelier-container-one  {
+        display: flex;
         flex-direction: column;
-        text-align: unset;
+    }
+
+    
+    .atelier-bloc-item {
+        flex: 1 1 200px;
     }
     
     .title-page-atelier{
@@ -198,6 +217,8 @@
         margin-bottom: 55px;
         padding-left: 15px;
         padding-top: 15px;
+        text-align: left;
+
     }
 
     .title-page-atelier::after {
@@ -211,11 +232,10 @@
 
     .bloc-atelier-nav{
         height: fit-content;
-        width: 50%; 
-        margin-left: 100px;
         position: relative;
-        z-index: 1000;
         align-items: center;
+        margin-left: 50px;
+        width: 50%;
     }
 
     .nav-item-atelier {
@@ -242,16 +262,18 @@
 
     .atelier-description {
         width: 60%;
-        height: 450px;
-        padding: 28px;
+        height: auto;
+        padding: 25px;
         text-align: center;
         margin-left: 50px;
         margin-top: 0px;
         border: 1px solid gray;
+
     }
 
     .atelier-title  {
-        font-size: 2rem;
+        font-size: 3rem;
+        font-weight: 300;
         margin: 20px 0 20px 0;
     }
 
@@ -259,42 +281,16 @@
     .atelier-texte {
         font-size: 1.25rem;
         padding: 15px;
-        text-align: justify;
+        text-align: center;
         line-height: 28px;
     }
 
-    .img-atelier-bloc {
-        width: 55%;
-        height: 450px;
-        position: relative;
-        margin: 0px 25px 0 25px;
-    }
-
-    .img-atelier {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        border-radius: 10px;
-    }
-    .gallerie-btn {
-        background-color: rgba(19, 9, 9, 0.45) ;
-        padding: 15px;
-        color: white;
-        border-radius: 10px;
-        font-size: 1.5rem;
-        top: 50%;
-        left: 40%;
-    }
-
-    .gallerie-btn:hover {
-        opacity: 0.8;
-    }
-}
+} 
 
 @media (min-width:1800px) {
     .bloc-atelier-nav {
-        width: 30%;
-        margin-left: 250px;
+        width: 50%;
+        margin-left: 200px;
     }
      .title-page-atelier::after {
          width: 100%;
@@ -303,16 +299,36 @@
      #atelier-info-bloc {
          justify-content: space-evenly;
      }
+     .atelier-bloc-item {
+        flex: 1 1 300px;
+    }
      .atelier-description {
-         width: 35%;
-         margin:0;
+         width: 45%;
+         margin-bottom: 50px;
      }
 
-    .img-atelier-bloc {
-        width: 35%;
-    }
 }
+@media (min-width:2100px) {
+    .bloc-atelier-nav {
+        width: 50%;
+        margin-left: 300px;
+    }
+     .title-page-atelier::after {
+         width: 100%;
+     }
 
+     #atelier-info-bloc {
+         justify-content: space-evenly;
+     }
+     .atelier-bloc-item {
+        flex: 1 1 500px;
+    }
+     .atelier-description {
+         width: 45%;
+         margin-bottom: 50px;
+     }
+
+}
 @media only screen and (device-width:1024px) {
     .title-page-atelier {
         text-align: center;
@@ -352,17 +368,5 @@
         font-size: 1.5rem;
     }
 
-    .img-atelier-bloc {
-        position: relative;
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    .gallerie-btn {
-        left: 35%;
-        top: 10%;
-        font-size: 2rem;
-    }
-
-
 }
+

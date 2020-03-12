@@ -4,7 +4,7 @@ import Accueil from '../views/Accueil';
 import About from '../views/About';
 import "./MainRouter.css";
 import Atelier from '../views/Atelier';
-import GalleryPhoto from '../views/Gallery';
+// import GalleryPhoto from '../views/Gallery';
 import Blog from '../views/Blog';
 import SingleArcticle from '../views/SingleArcticle';
 import Contact from '../views/Contact';
@@ -42,8 +42,8 @@ render() {
                             <Atelier realisations={realisations} />
                         </Route> 
 
-                        <Route exact path="/atelier/galerie/:realisation" children={({location}) => <GalleryPhoto location={location} />}/>
-                           
+                        {/* <Route exact path="/atelier/galerie/:realisation" children={({location}) => <GalleryPhoto location={location} />}/>
+                            */}
                    
                         
 
