@@ -11,6 +11,7 @@ import Contact from '../views/Contact';
 import Services from'../views/Services';
 import Error404 from '../views/Error404';
 import Footer from '../components/Footer';
+import MentionsLegales from '../views/MentionsLegales';
 
 
 export default class MainRouter extends Component {
@@ -64,7 +65,7 @@ render() {
                         </Route> 
 
                         <Route exact path="/mentionslegales">
-
+                                <MentionsLegales />
                         </Route> 
                         
 

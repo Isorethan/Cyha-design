@@ -7,10 +7,10 @@ import Gallery from 'react-photo-gallery';
 import GalleryPhoto from './Gallery';
 
 
-let photos = [] ;
 
 
 
+let photos ;
   
 export default class Atelier extends Component {
     constructor(props){
@@ -22,7 +22,8 @@ export default class Atelier extends Component {
             photos:[],
             
         }
-
+//  this.initGallery = this.initGallery.bind(this);
+//  this.getMedia = this.getMedia.bind(this);
     }
    
  setCurrentReal=(e)=> {
@@ -56,6 +57,22 @@ if(atelierItems){
 })
  }
 
+initGallery=()=> {
+
+    wp.realisation = wp.registerRoute( 'wp/v2', '/realisation/(?P<id>)' );
+            let t = this ;
+           
+            wp.realisation().get(function( err, realisations ) {
+                if ( err ) {   
+                    console.log(err)
+                }
+                    t.setState({
+                    currentReal:realisations[0]
+                })
+
+            })
+}
+
 
  componentDidUpdate(prevProp, prevState) {
     if(prevState.currentReal !== this.state.currentReal) {
@@ -72,20 +89,29 @@ if(atelierItems){
     componentDidMount(){
       
         this.getRealisations();
+        this.initGallery();    
+        
+        wp.realisation = wp.registerRoute( 'wp/v2', '/realisation/(?P<id>)' );
+            let t = this ;
+           
+            wp.realisation().get(function( err, realisations ) {
+                if ( err ) {   
+                    console.log(err)
+                }
+                    
+                  t.getMedia(realisations[0].id)
+                console.log(realisations)
 
-     
-      
+            })
         
     }
 
-    getMedia(catId){
-        
-      
-
+    getMedia(catId){    
+     
         wp.media().param('realisation', [catId]).page(1).perPage(100).get(function( err, data ) {
           if ( err ) {
               // handle err
-          } 
+          }  photos= [];
              data.map((image) =>  
               photos.push({
                   src:image.guid.rendered,
@@ -99,42 +125,27 @@ if(atelierItems){
        
             this.setState({
                 photos:photos
-            })
-         
-       
-       
+            })    
      }
 
     getRealisations=()=>{
         wp.realisation = wp.registerRoute( 'wp/v2', '/realisation/(?P<id>)' );
             let t = this ;
            
-           
-
             wp.realisation().get(function( err, realisations ) {
-                if ( err ) {
-    
+                if ( err ) {   
                     console.log(err)
                 }
-
                     t.setState({
                     realisations:realisations,
                     currentReal:realisations[0]
                 })
 
             })
-           
-
-         
-              
+                        
 }
                
             
-    
-    
-
-
-
     render() {
         let {realisations , currentReal,photos} = this.state ;
 
@@ -153,11 +164,11 @@ if(atelierItems){
                 
              ) :
             <Fragment>
-            <p className="loading-text">Loading...</p>
-            <div className="spinner">
-                <div className="cube1"></div>
-                <div className="cube2"></div>
-            </div>
+                <p className="loading-text">Loading...</p>
+                <div className="spinner">
+                    <div className="cube1"></div>
+                    <div className="cube2"></div>
+                </div>
             </Fragment>
             } 
         </nav>
@@ -176,7 +187,7 @@ if(atelierItems){
         <div className="img-atelier-bloc">
            
            {(photos) ?
-               <GalleryPhoto photos={photos} />
+               <GalleryPhoto key={this.setCurrentReal} photos={photos} />
         
                   :"LOADING"}  
          </div>
