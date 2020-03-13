@@ -188,12 +188,12 @@ chooseCategorie = (e) => {
           <Fragment>
         <section id="actualite-content">
         <div id="nav-articles">
-                <ul id="nav-list">
-                  <li className="nav-list-item" onClick={this.resetCat}>TOUS</li>
+                <select id="nav-list">
+                  <option className="nav-list-item" onClick={this.resetCat}>TOUS</option>
                   { (allCategories) && allCategories.map((cat,i)=>
-                  <li className="nav-list-item" value={cat.id} key={i} onClick={this.chooseCategorie.bind(this)}  >{cat.name}</li>
+                  <option className="nav-list-item" value={cat.id} key={i} onClick={this.chooseCategorie.bind(this)}  >{cat.name}</option>
                   )}
-                </ul>
+                </select>
             </div>
             { 
              

@@ -61,7 +61,7 @@ font-size: 50px;
 }
 #nav-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     text-transform: uppercase;
     justify-content: space-evenly;
