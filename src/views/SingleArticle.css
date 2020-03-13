@@ -7,7 +7,7 @@
 }
 
 .single-article > * {
-    text-align: center;
+    text-align: justify;
     max-width: 90%;
 }
 .single-article img {
@@ -45,6 +45,9 @@
     
     .single-article {
         margin-bottom: 35px;
+        width: 1100px;
+        margin: 0 auto;
+        text-align: left;
     }
     .single-article-title{
         font-size: 35px;
