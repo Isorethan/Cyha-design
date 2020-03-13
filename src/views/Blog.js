@@ -189,7 +189,7 @@ chooseCategorie = (e) => {
         <section id="actualite-content">
         <div id="nav-articles">
                 <select id="nav-list"  onChange={this.chooseCategorie.bind(this)} >
-                  <option className="nav-list-item" onClick={this.resetCat}>TOUS</option>
+               
                   { (allCategories) && allCategories.map((cat,i)=>
                   <option className="nav-list-item" value={cat.id} key={i}  >{cat.name}</option>
                   )}

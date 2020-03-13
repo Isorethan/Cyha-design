@@ -67,6 +67,5 @@ font-size: 50px;
     justify-content: space-evenly;
     list-style: none;
     text-decoration: none;
-    margin-bottom: 10px;
-    margin-bottom: 50px;
+    margin: 10px auto;
 }
