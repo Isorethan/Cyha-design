@@ -2,11 +2,7 @@ import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway   } from "react-images";
 
-const CustomHeader = ({ innerProps, isModal }) => isModal ? (
-  <div {...innerProps}>
-    Testing stuff
-  </div>
-) : null;
+
 let photos
 function GalleryPhoto(props) {
  
@@ -48,7 +44,7 @@ function GalleryPhoto(props) {
                 srcset: photo.srcSet,
                 caption: photo.title
               }))}
-              components={{ Header: CustomHeader }}
+             
 
             />
           </Modal>
