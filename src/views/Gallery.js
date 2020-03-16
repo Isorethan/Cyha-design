@@ -3,22 +3,12 @@ import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway   } from "react-images";
 
 
-let photos
+let photos ;
 function GalleryPhoto(props) {
  
 
-  
-
-
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
-
- 
-  
-
- 
-
-
 
 
   const openLightbox = useCallback((event, { photo, index }) => {
