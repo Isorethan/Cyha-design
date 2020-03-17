@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+.react-photo-gallery {
+    width: 100%;
+}
+
+
 #galerie-tapisserie {
     max-height: 60vh;
 }
@@ -119,7 +124,8 @@
     margin-bottom: 10px;
     margin-top: 20px;
     overflow-y: scroll;
-    max-height:100% ;
+    max-height: 55vh;
+   
 }
 
 .atelier-bloc-item {
@@ -285,6 +291,15 @@
         line-height: 28px;
     }
 
+    .img-atelier-bloc{ 
+        width: 900px;
+        height: 40%;
+        overflow-y: scroll;
+       
+     }
+
+
+
 } 
 
 @media (min-width:1800px) {
@@ -307,7 +322,7 @@
          margin-bottom: 50px;
      }
 
-}
+    
 @media (min-width:2100px) {
     .bloc-atelier-nav {
         width: 50%;
@@ -328,6 +343,11 @@
          margin-bottom: 50px;
      }
 
+     .img-atelier-bloc{ 
+        width: 1100px;
+        height: 110%;
+     }
+}
 }
 @media only screen and (device-width:1024px) {
     .title-page-atelier {

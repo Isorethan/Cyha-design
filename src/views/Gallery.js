@@ -1,11 +1,11 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, Fragment } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway   } from "react-images";
 
 
 let photos ;
 function GalleryPhoto(props) {
- 
+ photos = props.photos ;
 
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -22,14 +22,14 @@ function GalleryPhoto(props) {
   };
 
   return (
-    <div className="galerie">
-      <Gallery photos={props.photos} onClick={openLightbox} />
+    <Fragment>
+      <Gallery photos={photos} onClick={openLightbox} />
       <ModalGateway className="galerie-inner" >
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={props.photos.map(photo => ({
+              views={photos.map(photo => ({
                 ...photo,
                 srcset: photo.srcSet,
                 caption: photo.title
@@ -40,7 +40,7 @@ function GalleryPhoto(props) {
           </Modal>
         ) : null}
       </ModalGateway>
-    </div>
+      </Fragment>
   );
 }
 

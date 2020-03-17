@@ -11,7 +11,13 @@ import GalleryPhoto from './Gallery';
 
 
 let photos ;
-  
+function columns(containerWidth) {
+    let columns = 1;
+    if (containerWidth >= 500) columns = 2;
+    if (containerWidth >= 900) columns = 3;
+    if (containerWidth >= 1500) columns = 4;
+    return columns;
+  }
 export default class Atelier extends Component {
     constructor(props){
         super(props);
@@ -75,13 +81,14 @@ initGallery=()=> {
 
 
  componentDidUpdate(prevProp, prevState) {
+    let {currentReal} = this.state ;
     if(prevState.currentReal !== this.state.currentReal) {
         this.setState({
             photos:[]
         })
-        let {currentReal} = this.state ;
-
-      this.getMedia(currentReal.id)
+      
+        this.getMedia(currentReal.id)
+     
         
     }
  }
@@ -187,9 +194,16 @@ initGallery=()=> {
         <div className="img-atelier-bloc">
            
            {(photos) ?
-               <GalleryPhoto key={this.setCurrentReal} photos={photos} />
+               <GalleryPhoto key={this.setCurrentReal} photos={photos} direction="column" columns={columns}/>
         
-                  :"LOADING"}  
+                  :
+                  <Fragment>
+                  <p className="loading-text">Loading...</p>
+                  <div className="spinner">
+                     <div className="cube1"></div>
+                      <div className="cube2"></div>
+                     </div>
+                      </Fragment>}  
          </div>
     </div>
         </section>
