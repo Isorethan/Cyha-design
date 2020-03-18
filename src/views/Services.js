@@ -11,8 +11,7 @@ export default class Services extends Component {
         super();
 
         this.state={
-            services:[],
-            currentServiceID:null
+            services:[]
         }
 
     }
@@ -60,27 +59,26 @@ return(
 
 
 <section id="services-wrapper">
-    
+   
         <nav className="nav-services">
             <ul className="items-nav-services">
             { (services) ? services.map((service, index)=><li className="service-link" serviceid={service.acf.description_du_service} onClick={this.SetId.bind(this)} imagesrc={service.acf.image_du_service.url}  key={index} >{service.acf.titre_du_service}</li>):
             <Fragment>
-        <h1 className="loading-text">Chargement de l'article...</h1>
+        <h1 className="loading-text">Chargement de la liste</h1>
         <div className="spinner">
         <div className="cube1"></div>
          <div className="cube2"></div>
         </div>
-        ></Fragment>   }
+        </Fragment>   }
                
             
             </ul>
         </nav>
-        
-        <div id="services-container">
+        {(services[0])?<div id="services-container">
             <div id="services-description">
-                <h3 className="services-title">confection d'ameublement</h3>
+                <h3 className="services-title">{services[0].acf.titre_du_service}</h3>
                 <p className="services-text">
-                Conveying or northward offending admitting perfectly my. Colonel gravity get thought fat smiling add but. Wonder twenty hunted and put income set desire expect. Am cottage calling my is mistake cousins talking up. Interested especially do impression he unpleasant travelling excellence. All few our knew time done draw ask.
+                {services[0].acf.description_du_service}
                 </p>
                 <p className="services-postal-info">
                     Pour toutes demandes d'information : <br/>
@@ -90,9 +88,16 @@ return(
                     06.99.55.74.04 <br/>
                 </p>
             </div>
-            <div className="services-img-container"> <img src={ameublement} alt="Services" className="services-img"/> </div>
+            <div className="services-img-container"> <img src={services[0].acf.image_du_service.url} alt="Services" className="services-img"/> </div>
 
+        </div> :    <Fragment>
+        <h1 className="loading-text">Chargement du services</h1>
+        <div className="spinner">
+        <div className="cube1"></div>
+         <div className="cube2"></div>
         </div>
+        </Fragment> }
+        
 
 
 

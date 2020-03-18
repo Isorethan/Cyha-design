@@ -18,11 +18,16 @@ export default function About() {
                 <hr/>
                 <h3 className="title-description-about">qui sommes-nous ?</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
-                    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                L'aletelier cyha design est basé a rennes, spécialisé en création
+                ,confection et refection decoration textile et mobiliers sur-mesure pour
+                professionnels et particuliers.<br/>
+                Nous répondons à toutes vos demandes selon votre goût et vos choix
+                de matières
+                Nous sélectionnons toujours avec soin des produits à la pointe des
+                dernières tendances et adaptés à vos exigences, avec le meilleur
+                rapport qualité-prix.
+                nous vous aiderons à choisir les matières et coloris appropriés et
+                prendre les mesures avec vous.
                 </p>
                 <hr/>
                 <div className="horizontal-separator"> 
