@@ -124,7 +124,7 @@
     margin-bottom: 10px;
     margin-top: 20px;
     overflow-y: scroll;
-    max-height: 55vh;
+    max-height: 70vh;
    
 }
 
@@ -293,7 +293,6 @@
 
     .img-atelier-bloc{ 
         width: 900px;
-        height: 40%;
         overflow-y: scroll;
        
      }
