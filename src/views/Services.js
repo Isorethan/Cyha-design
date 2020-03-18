@@ -1,6 +1,5 @@
 import React , {Component , Fragment}from 'react'
 import "./Services.css" ;
-import ameublement from "../assets/img/ameublement_07.jpg"
 import wp from "../tools/Api" ;
 
 
@@ -28,14 +27,10 @@ export default class Services extends Component {
         (
                 
                 t.setState({
-                services:services,
-              
-
+                services:services
             })
-        ) 
-
-        })
-       
+        )
+        }) 
     }
 
     SetId(e){
