@@ -39,11 +39,9 @@ if(atelierItems){
         item.classList.remove("active")
         }
 }
-
-
     let t = this ;
 
- let ServiceChoisi = e.target.value ;
+ let ServiceChoisi = e.target.dataset.id ;
  if(ServiceChoisi){
    e.target.classList.add("active")
  }
@@ -84,12 +82,12 @@ initGallery=()=> {
     let {currentReal} = this.state ;
     if(prevState.currentReal !== this.state.currentReal) {
         this.setState({
+            currentReal:currentReal,
             photos:[]
         })
-      
+
         this.getMedia(currentReal.id)
-     
-        
+      
     }
  }
     
@@ -107,7 +105,7 @@ initGallery=()=> {
                 }
                     
                   t.getMedia(realisations[0].id)
-                console.log(realisations)
+
 
             })
         
@@ -134,6 +132,34 @@ initGallery=()=> {
                 photos:photos
             })    
      }
+
+
+    updateMedia=()=> {
+        let photos ;
+        wp.media().param('realisation', [this.state.currentReal.id]).page(1).perPage(100).get(function( err, data ) {
+            if ( err ) {
+                // handle err
+            }  photos= [];
+               data.map((image) =>  
+                photos.push({
+                    src:image.guid.rendered,
+                    width:4,
+                    height:3,
+                    title:image.title.rendered
+  
+                  })                   
+               )
+          })
+         
+              this.setState({
+                  photos:photos
+              })
+
+
+
+    }
+
+
 
     getRealisations=()=>{
         wp.realisation = wp.registerRoute( 'wp/v2', '/realisation/(?P<id>)' );
@@ -167,7 +193,7 @@ initGallery=()=> {
         <nav className="bloc-atelier-nav">
             {  (realisations)? realisations.map((realisation, i)=>
                   
-                <li key={i} className="nav-item-atelier"  onClick={this.setCurrentReal.bind(this)}  value={realisation.id}>{realisation.name}</li>
+                <li key={i} className="nav-item-atelier"  onClick={this.setCurrentReal.bind(this)}  data-id={realisation.id}>{realisation.name}</li>
                 
              ) :
             <Fragment>
@@ -204,6 +230,7 @@ initGallery=()=> {
                       <div className="cube2"></div>
                      </div>
                       </Fragment>}  
+                      {console.log(photos)}
          </div>
     </div>
         </section>

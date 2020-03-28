@@ -15,11 +15,6 @@ export default class Blog extends Component{
             perPage : 9
         }
 
-    
-
- 
-
-
     componentDidMount()
     {
       this.getArticles();
@@ -109,9 +104,7 @@ let t=this;
             t.setState({
               articles: articles ,
               totalPages:articles._paging.totalPages
-          })
-          
-            
+          })   
         }
       
       })
@@ -131,13 +124,7 @@ let t=this;
         }
       
     })
-    }
-
-
-   
-    
- 
-  
+    } 
  }
 
 
@@ -176,10 +163,6 @@ chooseCategorie = (e) => {
      t.updateArticles(prevPage)
    }
 
-
-
-
-  
       render () {
         
         let {articles, page ,totalPages, allCategories} = this.state;
