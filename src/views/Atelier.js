@@ -51,14 +51,17 @@ if(atelierItems){
     if ( err ) {
         // handle err
         console.log(err)
+    }else {
+        t.setState({
+            currentReal:realisation
+         
+        })
+    t.getMedia(ServiceChoisi) ;
     }
     // do something with the returned posts                      
-        t.setState({
-        currentReal:realisation,
-        photos:[]
-    })
+
     
-})
+ })
  }
 
 initGallery=()=> {
@@ -80,15 +83,21 @@ initGallery=()=> {
 
  componentDidUpdate(prevProp, prevState) {
     let {currentReal} = this.state ;
+    
     if(prevState.currentReal !== this.state.currentReal) {
+        console.log("currentReal Changed ="+currentReal.id+" from "+prevState.currentReal)
+        console.log(prevState)
         this.setState({
-            currentReal:currentReal,
-            photos:[]
+            currentReal:currentReal
+       
         })
 
         this.getMedia(currentReal.id)
       
+    }else {
+        console.log("currentReal Didn't change ="+currentReal.id)
     }
+    console.log("componentDidUpdate")
  }
     
     componentDidMount(){
@@ -108,56 +117,36 @@ initGallery=()=> {
 
 
             })
-        
+            console.log("componentDidMount")
     }
 
     getMedia(catId){    
-     
+     let t=this;
         wp.media().param('realisation', [catId]).page(1).perPage(100).get(function( err, data ) {
           if ( err ) {
               // handle err
-          }  photos= [];
-             data.map((image) =>  
-              photos.push({
-                  src:image.guid.rendered,
-                  width:4,
-                  height:3,
-                  title:image.title.rendered
+          }else{
+            photos= [];
+            data.map((image) =>  
+             photos.push({
+                 src:image.guid.rendered,
+                 width:4,
+                 height:3,
+                 title:image.title.rendered
 
-                })                   
-             )
+               })                   
+            )
+            t.setState({
+                photos:photos
+            })   
+          }  
         })
        
-            this.setState({
-                photos:photos
-            })    
+           
      }
 
 
-    updateMedia=()=> {
-        let photos ;
-        wp.media().param('realisation', [this.state.currentReal.id]).page(1).perPage(100).get(function( err, data ) {
-            if ( err ) {
-                // handle err
-            }  photos= [];
-               data.map((image) =>  
-                photos.push({
-                    src:image.guid.rendered,
-                    width:4,
-                    height:3,
-                    title:image.title.rendered
-  
-                  })                   
-               )
-          })
-         
-              this.setState({
-                  photos:photos
-              })
 
-
-
-    }
 
 
 
@@ -220,7 +209,7 @@ initGallery=()=> {
         <div className="img-atelier-bloc">
            
            {(photos) ?
-               <GalleryPhoto key={this.setCurrentReal} photos={photos} direction="column" columns={columns}/>
+               <GalleryPhoto  photos={photos} direction="column" columns={columns}/>
         
                   :
                   <Fragment>
@@ -230,7 +219,7 @@ initGallery=()=> {
                       <div className="cube2"></div>
                      </div>
                       </Fragment>}  
-                      {console.log(photos)}
+                      {console.log("render")}
          </div>
     </div>
         </section>

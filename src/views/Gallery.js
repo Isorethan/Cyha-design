@@ -1,15 +1,20 @@
-import React, { useState, useCallback, Fragment } from "react";
+import React, { useState, useCallback,useEffect, Fragment ,} from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway   } from "react-images";
 
 
-let photos ;
-function GalleryPhoto(props) {
- photos = props.photos ;
 
+function GalleryPhoto(props) {
+
+  const [state , setPhotos] = useState(props)
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
+
+useEffect(() => {
+  setPhotos(props)
+ 
+}, [props])
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index);
@@ -23,13 +28,13 @@ function GalleryPhoto(props) {
 
   return (
     <Fragment>
-      <Gallery photos={photos} onClick={openLightbox} />
+      <Gallery photos={state.photos} onClick={openLightbox} />
       <ModalGateway className="galerie-inner" >
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={photos.map(photo => ({
+              views={state.photos.map(photo => ({
                 ...photo,
                 srcset: photo.srcSet,
                 caption: photo.title
