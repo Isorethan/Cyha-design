@@ -1,6 +1,8 @@
 import React from 'react'
 import './About.css'
 import separator from '../assets/img/Groupe 49.svg'
+import {Helmet} from "react-helmet";
+
 export default function About() {
     return (
         

@@ -65,7 +65,7 @@ render() {
                         <Contact/>
                         </Route> 
 
-                        <Route exact path="/mentionslegales">
+                        <Route exact path="/mentions-legales">
                                 <MentionsLegales />
                         </Route> 
                         

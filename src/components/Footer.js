@@ -19,7 +19,7 @@ export default function Footer() {
             <a href="https://www.facebook.com/cyhadesign/" target="_blank" rel="noopener noreferrer"> <img className="social-media-item" src={facebook} alt="facebook" /></a>  
             <a href="https://www.instagram.com/cyhadesign/ " target="_blank" rel="noopener noreferrer"><img className="social-media-item" src={instagram} alt="instagram" />  </a>  
         </div>
-        <Link className="mentions-link" to="/mentionslegales">Mentions Légales</Link>
+        <Link className="mentions-link" to="/mentions-legales">Mentions Légales</Link>
         </footer>  )
         } else {
             return null

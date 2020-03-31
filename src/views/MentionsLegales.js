@@ -1,5 +1,6 @@
 import React from 'react';
 import './MentionsLegales.css';
+import {Helmet} from "react-helmet";
 
 
 export default function MentionsLegales() {
@@ -72,7 +73,12 @@ Cependant, ce principe comporte certaines exceptions. En effet, pour certains se
 Enfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site Internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d'accès. De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.
 
 
-            
+<Helmet>
+                      <meta charSet="utf-8" />
+                      <title>CYHA DESIGN Mentions Légales</title>
+                      <link rel="canonical" href="https://cyha-design.fr/mentions-legales/" />
+                      <meta name="description" content="Mentions légales du site CYHA DESIGN" />
+      </Helmet> 
         </section>
         
     )

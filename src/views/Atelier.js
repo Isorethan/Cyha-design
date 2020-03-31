@@ -5,6 +5,7 @@ import img1 from "../assets/img/whiteroom.jpg" ;
 import wp from "../tools/Api" ;
 import Gallery from 'react-photo-gallery';
 import GalleryPhoto from './Gallery';
+import {Helmet} from "react-helmet";
 
 
 
@@ -215,13 +216,19 @@ initGallery=()=> {
                   <Fragment>
                   <p className="loading-text">Loading...</p>
                   <div className="spinner">
-                     <div className="cube1"></div>
-                      <div className="cube2"></div>
-                     </div>
+                    <div className="cube1"></div>
+                    <div className="cube2"></div>
+                  </div>
                       </Fragment>}  
                       {console.log("render")}
          </div>
     </div>
+    <Helmet>
+                      <meta charSet="utf-8" />
+                      <title>CYHA DESIGN Réalisations</title>
+                      <link rel="canonical" href="https://cyha-design.fr/realisations/" />
+                      <meta name="description" content="Réalisations de CYHA DESIGN , photos et descriptions" />
+      </Helmet>
         </section>
 
         )

@@ -1,6 +1,7 @@
 import React from 'react' ;
 import "./Contact.css" ;
 import  MapContainer  from '../components/GoogleMap';
+import {Helmet} from "react-helmet";
 
 
 export default function Contact() {
@@ -33,7 +34,12 @@ export default function Contact() {
       
                 
             </div>
-
+            <Helmet>
+                      <meta charSet="utf-8" />
+                      <title>CYHA DESIGN Contacts</title>
+                      <link rel="canonical" href="https://cyha-design.fr/contacts/" />
+                      <meta name="description" content="Contacts et adresse de CYHA DESIGN" />
+      </Helmet>
         </section>
     )
 }

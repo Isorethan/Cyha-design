@@ -4,6 +4,7 @@ import Article from '../components/Article';
 import './Blog.css' ;
 import prev from "../assets/img/FLECHEGAUCHE.svg"
 import next from "../assets/img/FLECHEDROITE.svg"
+import {Helmet} from "react-helmet";
 
 export default class Blog extends Component{
    
@@ -203,6 +204,12 @@ chooseCategorie = (e) => {
                                
                           
                              </div>
+                             <Helmet>
+                                <meta charSet="utf-8" />
+                                <title>CYHA DESIGN Articles</title>
+                                <link rel="canonical" href="https://cyha-design.fr/articles/" />
+                                <meta name="description" content="Les actualités de CYHA DESIGN" />
+                            </Helmet>
                              </Fragment>
                 :
                 <Fragment>

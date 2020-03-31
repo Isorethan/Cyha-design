@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 import wp from '../tools/Api';
 import "./SingleArticle.css" ;
 import Image from '../components/Image';
+import {Helmet} from "react-helmet";
 
  export default ()  => {
   const[article, loadArticle] = useState(false);
@@ -39,6 +40,12 @@ import Image from '../components/Image';
                         __html: article.content.rendered.replace(/<script(.)*<\/script>/gm, '')
                     }}>
                     </div>
+                    <Helmet>
+                      <meta charSet="utf-8" />
+                        <title>CYHA DESIGN-{article.title.rendered}</title>
+                      
+                      <meta name="description" content={article.excerpt.rendered} />
+                    </Helmet>
             </div>
         )
     }

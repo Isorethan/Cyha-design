@@ -1,6 +1,7 @@
 import React , {Component , Fragment}from 'react'
 import "./Services.css" ;
 import wp from "../tools/Api" ;
+import {Helmet} from "react-helmet";
 
 
 
@@ -93,7 +94,12 @@ return(
         </div>
         </Fragment> }
         
-
+        <Helmet>
+                      <meta charSet="utf-8" />
+                      <title>CYHA DESIGN Services</title>
+                      <link rel="canonical" href="https://cyha-design.fr/services/" />
+                      <meta name="description" content="Prèstations proposé par CYHA DESIGN" />
+      </Helmet>
 
 
     </section>
