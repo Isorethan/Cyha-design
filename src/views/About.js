@@ -67,7 +67,12 @@ export default function About() {
                 </p>
                 <hr/>
             </div>
-
+            <Helmet>
+                      <meta charSet="utf-8" />
+                      <title>CYHA DESIGN Qui sommes nous</title>
+                      <link rel="canonical" href="https://cyha-design.fr/about/" />
+                      <meta name="description" content="Présntation de CYHA DESIGN" />
+      </Helmet>
 
         </section>
        
