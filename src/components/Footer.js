@@ -12,7 +12,7 @@ export default function Footer() {
             return (<footer className="footer">
             
             
-            {console.log(location)}
+      
 
 
         <div className="social-media-container"> 

@@ -14,19 +14,22 @@ export default function NavBar() {
         (navList.classList.contains('open')) ? btn.classList.add('croix') : btn.classList.remove('croix')
     }
 
-
+   let openPhone = (e)=> {
+       let t = e.target.getAttribute("href");
+       window.open(t)
+   }
 
     return (
         <Fragment>
 <nav className="main-nav" role="navigation">
             <ul className="nav-list">
-                <li className=" nav-top-tel">06.99.55.74.04</li>
-                <NavLink to ="/about"   onClick={showNav} ><li className="nav-item">CYHA</li></NavLink>
-                <NavLink to ="/atelier" onClick={showNav} ><li className="nav-item">NOS REALISATIONS</li></NavLink>
-                <NavLink to ="/services"onClick={showNav} ><li className="nav-item">NOS SERVICES</li></NavLink>
+                <li className=" nav-top-tel" href="tel:+33699557404" onClick={openPhone}>06.99.55.74.04</li>
+                <NavLink to ="/about" onClick={showNav}   ><li className="nav-item">CYHA</li></NavLink>
+                <NavLink to ="/atelier" onClick={showNav} ><li className="nav-item">REALISATIONS</li></NavLink>
+                <NavLink to ="/services"onClick={showNav} ><li className="nav-item">SERVICES</li></NavLink>
                 <NavLink to ="/articles"onClick={showNav} ><li className="nav-item">ACTUALITES</li></NavLink>
-                <NavLink to ="/contacts"onClick={showNav} ><li className="nav-item">CONTACTS</li></NavLink>
-                <span className="tel-nav">06.99.55.74.04</span>
+                <NavLink to ="/contacts" onClick={showNav}><li className="nav-item">CONTACTS</li></NavLink>
+                <span className="tel-nav" href="tel:+33699557404" onClick={openPhone}>06.99.55.74.04</span>
             </ul>
 </nav>
         <button className="toggle-button" onClick={showNav} >

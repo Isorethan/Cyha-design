@@ -134,6 +134,7 @@
     font-size: 1.8rem;
     z-index: 2;
     text-align: center;
+    cursor: pointer;
 }
 
 .nav-top-tel {
@@ -162,6 +163,7 @@
 
     .nav-top-tel {
         display: none;
+        cursor: pointer;
     }
 
     .main-nav {

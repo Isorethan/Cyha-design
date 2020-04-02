@@ -86,8 +86,7 @@ initGallery=()=> {
     let {currentReal} = this.state ;
     
     if(prevState.currentReal !== this.state.currentReal) {
-        console.log("currentReal Changed ="+currentReal.id+" from "+prevState.currentReal)
-        console.log(prevState)
+     
         this.setState({
             currentReal:currentReal
        
@@ -95,10 +94,8 @@ initGallery=()=> {
 
         this.getMedia(currentReal.id)
       
-    }else {
-        console.log("currentReal Didn't change ="+currentReal.id)
     }
-    console.log("componentDidUpdate")
+   
  }
     
     componentDidMount(){
@@ -118,7 +115,7 @@ initGallery=()=> {
 
 
             })
-            console.log("componentDidMount")
+          
     }
 
     getMedia(catId){    
@@ -220,7 +217,7 @@ initGallery=()=> {
                     <div className="cube2"></div>
                   </div>
                       </Fragment>}  
-                      {console.log("render")}
+                    
          </div>
     </div>
     <Helmet>
