@@ -15,6 +15,10 @@
     width: 100%;
 }
 
+.single-article  .react-photo-gallery--gallery {
+    width: 100%;
+}
+
 
 .img-article-bloc {
     display: flex;
