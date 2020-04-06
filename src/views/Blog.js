@@ -101,11 +101,12 @@ let t=this;
                 error: error
             })
         }else{
+           if(articles) {  
+               t.setState({
+            articles: articles ,
+            totalPages:articles._paging.totalPages
+        }) }
           
-            t.setState({
-              articles: articles ,
-              totalPages:articles._paging.totalPages
-          })   
         }
       
       })
