@@ -101,7 +101,7 @@ let t=this;
                 error: error
             })
         }else{
-           if(articles) {  
+           if(articles!== undefined) {  
                t.setState({
             articles: articles ,
             totalPages:articles._paging.totalPages
