@@ -5,6 +5,7 @@ import "./SingleArticle.css" ;
 import Image from '../components/Image';
 import GalleryPhoto from './Gallery';
 import {Helmet} from "react-helmet";
+import BtnRetour from '../components/BtnRetour';
 
 
 
@@ -16,17 +17,16 @@ import {Helmet} from "react-helmet";
 
 
     useEffect(() => {
-        let wordpressGallery= document.querySelector(".wp-block-gallery");
        let  imgNode= document.querySelectorAll(".wp-block-gallery img") ;
        let imgArray= [...imgNode] ;
        let photos= [];
-       imgArray.map(img => {
+       imgArray.map(img => 
            photos.push({
             src:img.dataset["fullUrl"],
             width:4,
             height:3,
            })
-        })
+        )
             setGallery(photos)
            
        }, [article])
@@ -49,6 +49,7 @@ import {Helmet} from "react-helmet";
         const date = new Date(article.date);
         return (
             <div className="single-article">
+                <BtnRetour class="btn-retour-blog" link="/articles" description="Retour Aux Actualités" />  
                 <h1>{article.title.rendered}</h1>
                     {/* <p>{article.categories}</p> */}
                     <p>{ `${date.getDay()}/${date.getMonth()+1}/${date.getFullYear()} à ${date.getHours()}:${date.getMinutes()}`}</p>

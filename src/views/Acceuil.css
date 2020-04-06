@@ -41,7 +41,7 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(../assets/img/unnamed.jpg);
+    background-image: url(../assets/img/backgroundMobile.jpeg);
     background-size: cover;
     overflow: hidden;
   
@@ -82,9 +82,18 @@
 
 @media (min-width: 1024px) {
 
+    #accueil {
+        
+        background-image: url(../assets/img/unnamed.jpg);
+    }
+
+
     .accueil-text {
         width: 50%;
         line-height: 35px;
+        
     }
 
 }
+
+

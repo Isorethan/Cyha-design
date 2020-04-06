@@ -19,6 +19,10 @@
     width: 100%;
 }
 
+.btn-retour-blog {
+    position: relative;
+    left:15px;
+}
 
 .img-article-bloc {
     display: flex;

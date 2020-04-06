@@ -1,9 +1,6 @@
 import React, { Component , Fragment } from 'react'
-import {Link} from "react-router-dom" ;
 import "./Atelier.css" ;
-import img1 from "../assets/img/whiteroom.jpg" ;
 import wp from "../tools/Api" ;
-import Gallery from 'react-photo-gallery';
 import GalleryPhoto from './Gallery';
 import {Helmet} from "react-helmet";
 
