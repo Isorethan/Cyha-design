@@ -3,6 +3,8 @@ import "./Atelier.css" ;
 import wp from "../tools/Api" ;
 import GalleryPhoto from './Gallery';
 import {Helmet} from "react-helmet";
+import prev from "../assets/img/FLECHEGAUCHE.svg"
+import next from "../assets/img/FLECHEDROITE.svg"
 
 
 
@@ -24,6 +26,7 @@ export default class Atelier extends Component {
             realisations:null,
             currentReal:null,
             photos:[],
+            page:1
             
         }
 //  this.initGallery = this.initGallery.bind(this);
@@ -51,10 +54,11 @@ if(atelierItems){
         console.log(err)
     }else {
         t.setState({
-            currentReal:realisation
+            currentReal:realisation,
+            page:1
          
         })
-    t.getMedia(ServiceChoisi) ;
+    t.getMedia(ServiceChoisi, 1) ;
     }
     // do something with the returned posts                      
 
@@ -80,7 +84,7 @@ initGallery=()=> {
 
 
  componentDidUpdate(prevProp, prevState) {
-    let {currentReal} = this.state ;
+    let {currentReal, page} = this.state ;
     
     if(prevState.currentReal !== this.state.currentReal) {
      
@@ -89,7 +93,7 @@ initGallery=()=> {
        
         })
 
-        this.getMedia(currentReal.id)
+        this.getMedia(currentReal.id, page)
       
     }
    
@@ -108,16 +112,16 @@ initGallery=()=> {
                     console.log(err)
                 }
                     
-                  t.getMedia(realisations[0].id)
+                  t.getMedia(realisations[0].id,1)
 
 
             })
           
     }
 
-    getMedia(catId){    
+    getMedia(catId, currentPage){    
      let t=this;
-        wp.media().param('realisation', [catId]).page(1).perPage(100).get(function( err, data ) {
+        wp.media().param('realisation', [catId]).page(currentPage).perPage(9).get(function( err, data ) {
           if ( err ) {
               // handle err
           }else{
@@ -126,13 +130,17 @@ initGallery=()=> {
              photos.push({
                  src:image.guid.rendered,
                  width:4,
-                 height:3,
+                 height:4,
                  title:image.title.rendered
+                 
 
                })                   
             )
             t.setState({
-                photos:photos
+                photos:photos,
+                page:currentPage,
+                totalPages:data._paging.totalPages
+
             })   
           }  
         })
@@ -141,6 +149,25 @@ initGallery=()=> {
      }
 
 
+
+
+
+     increment=()=> {
+        let   t= this;
+        let {currentReal}= t.state ;
+        let nextPage = t.state.page+1 ;
+        
+        this.getMedia(currentReal.id, nextPage)
+       }
+    
+    
+       decrement=()=> {
+         let t=this;
+         let {currentReal}= t.state ;
+         let prevPage = t.state.page-1 ;
+       
+         this.getMedia(currentReal.id, prevPage)
+       }
 
 
 
@@ -164,7 +191,7 @@ initGallery=()=> {
                
             
     render() {
-        let {realisations , currentReal,photos} = this.state ;
+        let {realisations , currentReal,photos,page,totalPages} = this.state ;
 
 
         return (
@@ -204,7 +231,16 @@ initGallery=()=> {
         <div className="img-atelier-bloc">
            
            {(photos) ?
+           <Fragment>
                <GalleryPhoto  photos={photos} direction="column" columns={columns}/>
+               <div id="pagination">
+                    <img onClick={this.decrement.bind(this)} src={prev} alt="prev" className={(page < 2 ) ? 'disabled' : 'prev'}  />  
+                            <span className="page-count">
+                            |{page} / {totalPages}|
+                            </span>
+                        <img onClick={this.increment.bind(this)} src={next} alt="next" className={(page>= totalPages ) ? 'disabled' : 'next'}/>  
+                </div>
+             </Fragment>
         
                   :
                   <Fragment>
@@ -217,12 +253,12 @@ initGallery=()=> {
                     
          </div>
     </div>
-    <Helmet>
-                      <meta charSet="utf-8" />
-                      <title>CYHA DESIGN Réalisations</title>
-                      <link rel="canonical" href="https://cyha-design.fr/realisations/" />
-                      <meta name="description" content="Réalisations de CYHA DESIGN , photos et descriptions" />
-      </Helmet>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>CYHA DESIGN Réalisations</title>
+                <link rel="canonical" href="https://cyha-design.fr/realisations/" />
+                <meta name="description" content="Réalisations de CYHA DESIGN , photos et descriptions" />
+            </Helmet>
         </section>
 
         )

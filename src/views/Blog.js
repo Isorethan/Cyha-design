@@ -195,15 +195,14 @@ chooseCategorie = (e) => {
               
 
                     </div>
+                    
                        <div id="pagination">
-                       <img onClick={this.decrement.bind(this)} src={prev} alt="prev" className={(page < 2 ) ? 'disabled' : 'prev'}  />  
-                             <span className="page-count">
-                               |{page} / {totalPages}|
-                             </span>
-                        <img onClick={this.increment.bind(this)} src={next} alt="next" className={(page>= totalPages ) ? 'disabled' : 'next'}/>
-                               
-                          
-                             </div>
+                          <img onClick={this.decrement.bind(this)} src={prev} alt="prev" className={(page < 2 ) ? 'disabled' : 'prev'}  />  
+                                <span className="page-count">
+                                  |{page} / {totalPages}|
+                                </span>
+                            <img onClick={this.increment.bind(this)} src={next} alt="next" className={(page>= totalPages ) ? 'disabled' : 'next'}/>  
+                        </div>
                              <Helmet>
                                 <meta charSet="utf-8" />
                                 <title>CYHA DESIGN Articles</title>
