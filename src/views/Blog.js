@@ -101,12 +101,16 @@ let t=this;
                 error: error
             })
         }else{
-           if(articles!== "undefined") {  
-               t.setState({
-            articles: articles ,
-            totalPages:articles._paging.totalPages
-        }) }
           
+            t.setState({
+              articles: articles ,
+          })   
+            if (articles._paging.totalPages){
+              t.setState({
+                totalPages:articles._paging.totalPages
+              })
+            }
+        
         }
       
       })
