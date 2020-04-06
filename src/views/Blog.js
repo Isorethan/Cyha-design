@@ -105,7 +105,7 @@ let t=this;
             t.setState({
               articles: articles ,
           })   
-            if (articles._paging.totalPages){
+            if (articles._paging){
               t.setState({
                 totalPages:articles._paging.totalPages
               })
