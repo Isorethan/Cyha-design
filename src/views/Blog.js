@@ -134,8 +134,6 @@ let t=this;
  }
 
 
-
-
 chooseCategorie = (e) => {
   let t =this;
 
