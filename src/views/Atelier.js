@@ -130,7 +130,7 @@ initGallery=()=> {
              photos.push({
                  src:image.guid.rendered,
                  width:4,
-                 height:4,
+                 height:3,
                  title:image.title.rendered
                  
 

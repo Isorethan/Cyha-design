@@ -15,6 +15,7 @@ import BtnRetour from '../components/BtnRetour';
   const [gallery, setGallery] = useState([]);
     let {slug} = useParams();
 
+    
 
     useEffect(() => {
        let  imgNode= document.querySelectorAll(".wp-block-gallery img") ;
@@ -28,7 +29,7 @@ import BtnRetour from '../components/BtnRetour';
            })
         )
             setGallery(photos)
-           
+          
        }, [article])
 
     if(!article){
@@ -44,8 +45,7 @@ import BtnRetour from '../components/BtnRetour';
 }
 
     if (article){
-      
-    
+        console.log(gallery)
         const date = new Date(article.date);
         return (
             <div className="single-article">
@@ -59,15 +59,17 @@ import BtnRetour from '../components/BtnRetour';
                     }}>
                     </div> 
 
-                    <div className="img-article-bloc">
-                        {(gallery !== []) ? <GalleryPhoto  photos={gallery} /> :   <Fragment>
-                  <p className="loading-text">Loading...</p>
-                  <div className="spinner">
-                    <div className="cube1"></div>
-                    <div className="cube2"></div>
-                  </div>
-                      </Fragment>}
+          
+                {(gallery !== []) ? <GalleryPhoto  photos={gallery} /> 
+                :  
+                 <Fragment>
+                    <p className="loading-text">Loading...</p>
+                    <div className="spinner">
+                        <div className="cube1"></div>
+                        <div className="cube2"></div>
                     </div>
+                </Fragment>}
+                  
                
                     <Helmet>
                       <meta charSet="utf-8" />
