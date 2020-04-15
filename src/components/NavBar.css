@@ -150,6 +150,10 @@
         background-color: white ;
         transition: .6s ease-in-out;
     }
+
+    .croix {
+        position: absolute;
+    }
   
     .croix .toggle-button__line:nth-child(1) { 
         background-color: white ;
@@ -268,6 +272,10 @@
 
     .nav-list *+* {
         margin:0.2rem;
+    }
+
+    .croix {
+        position: absolute;
     }
 
 }
