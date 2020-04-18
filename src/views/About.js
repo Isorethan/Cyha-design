@@ -4,6 +4,9 @@ import separator from '../assets/img/Groupe 49.svg'
 import {Helmet} from "react-helmet";
 
 export default function About() {
+
+
+    //new js
     return (
         
         <section id="about-main">
