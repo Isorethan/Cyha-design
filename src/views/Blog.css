@@ -39,7 +39,8 @@ font-size: 50px;
  
 }
 #pagination img {
-    width: 50px;
+    width: 45px;
+    margin: 20px;
 }
 
 .page-count{

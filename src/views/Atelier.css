@@ -4,18 +4,34 @@
     padding: 0;
 }
 
-
-
-
 .react-photo-gallery--gallery {
     width: 100%;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: lightblue;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;       
+     }
 
 
-
-#galerie-tapisserie {
-    max-height: 60vh;
+#atelier-container #pagination img {
+        width: 45px;
+        margin: 20px 20px 20px 20px;
 }
 
 #atelier-container {
@@ -146,7 +162,7 @@
 }
 
 .atelier-container-two {
-    width: 100%;
+    margin: 20px
 }
 
 
@@ -217,19 +233,22 @@
     .atelier-container-one  {
         display: flex;
         flex-direction: column;
+        width: 50%;
     }
 
+    .atelier-container-two {
+        width: 50%;
+    }
     
     .atelier-bloc-item {
         flex: 1 1 200px;
     }
     
     .title-page-atelier{
-        font-size: 3.5rem;
+        font-size: 3rem;
         font-weight: lighter;
         margin-bottom: 55px;
-        padding-left: 15px;
-        padding-top: 15px;
+        margin-left: 25px;
         text-align: left;
 
     }
@@ -244,11 +263,8 @@
 
 
     .bloc-atelier-nav{
-        height: fit-content;
-        position: relative;
-        align-items: center;
-        margin-left: 50px;
-        width: 50%;
+        width: 80%;
+        border-radius: 20px;
     }
 
     .nav-item-atelier {
@@ -274,13 +290,12 @@
 
 
     .atelier-description {
-        width: 60%;
         height: auto;
         padding: 25px;
         text-align: center;
-        margin-left: 50px;
-        margin-top: 0px;
         border: 1px solid gray;
+        margin: 0 auto;
+        margin-bottom: 20px;
 
     }
 
@@ -299,10 +314,8 @@
     }
 
     .img-atelier-bloc{ 
-        width: 900px;
         overflow-y: scroll;
-       
-     }
+    }        
 
 
 
@@ -324,14 +337,14 @@
         flex: 1 1 300px;
     }
      .atelier-description {
-         width: 45%;
+         width: 80%;
          margin-bottom: 50px;
      }
 
     
 @media (min-width:2100px) {
     .bloc-atelier-nav {
-        width: 50%;
+        width: 80%;
         margin-left: 300px;
     }
      .title-page-atelier::after {
