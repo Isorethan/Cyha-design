@@ -49,7 +49,9 @@
     text-align: center;
     margin: 0 auto;
     position: relative;
-    background-color: whitesmoke;
+    background-color: rgb(116,34,37);
+    color: #D5BCBD;
+
     font-size: 1em;
     margin-bottom: 25px;
 }
