@@ -16,6 +16,7 @@ export default class Image extends Component{
         if (this.props.id){
             wp.media().id(this.props.id).get(function(err, image){
                 if (!err){
+                    console.log(image)
                     t.setState({
                         alt: image.alt_text,
                         url: image.media_details.sizes[t.props.size].source_url
