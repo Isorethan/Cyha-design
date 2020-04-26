@@ -35,9 +35,9 @@ export default function About() {
                 prendre les mesures avec vous.
                 </p>
                 <hr/>
-                <div className="horizontal-separator"> 
+                {/* <div className="horizontal-separator"> 
                     <img className="dotes-separator" src={separator} alt="" />
-                </div>
+                </div> */}
             </div>
           
             
@@ -51,9 +51,9 @@ export default function About() {
                 Le coton local cultivé, tissé et teinté par les braves cultivateurs, tisserands et teinturières locaux certifie l’authenticité des produits.
                 </p>
                 <hr/>
-                <div className="horizontal-separator">
+                {/* <div className="horizontal-separator">
                     <img className="dotes-separator" src={separator} alt="" />
-                </div>
+                </div> */}
             </div>
            
 
