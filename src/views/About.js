@@ -45,11 +45,10 @@ export default function About() {
             <hr/>
                 <h3 className="title-description-about">notre histoire</h3 >
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et 
-                    dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
-                    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut 
-                    labore et dolore magna aliquyam erat, sed diam voluptua.
+                À travers la marque, le but est de promouvoir le coton local et authentique malien, l’artisanat et le savoir-faire africain en métissant
+                les cultures vestimentaires d’un pays d’origine, le Mali, et, d’un pays de résidence, la France.
+                Les créations CYHÄ sont faites a base des matières et techniques traditionnelles issues de l’artisanat malien telles que le bogolan, l’indigo et les tissages traditionnels.
+                Le coton local cultivé, tissé et teinté par les braves cultivateurs, tisserands et teinturières locaux certifie l’authenticité des produits.
                 </p>
                 <hr/>
                 <div className="horizontal-separator">
@@ -62,10 +61,6 @@ export default function About() {
                 <hr/>
                 <h3 className="title-description-about">démarche</h3 >
                 <p>
-                À travers la marque, le but est de promouvoir le coton local et authentique malien, l’artisanat et le savoir-faire africain en métissant
-                les cultures vestimentaires d’un pays d’origine, le Mali, et, d’un pays de résidence, la France.
-                Les créations CYHÄ sont faites a base des matières et techniques traditionnelles issues de l’artisanat malien telles que le bogolan, l’indigo et les tissages traditionnels.
-                Le coton local cultivé, tissé et teinté par les braves cultivateurs, tisserands et teinturières locaux certifie l’authenticité des produits.
                 Chaque produit vendu par CYHÄ contribue à l’épanouissement de l’artisanat de l’Afrique de l’Ouest.
                 Les savoir-faire sont puisés là où ils sont et sont mobilisés avec joie parmi tous les continents tant que les humains sont respectés dans 
                 leurs conditions de travail et que la fabrication des produits est en accord avec la démarche de la marque.

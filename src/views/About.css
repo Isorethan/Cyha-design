@@ -31,6 +31,7 @@
 .description-div-bloc{
     margin: 25px 0 55px 0;
     padding: 0 15px 0 15px;
+    border-radius: 15px;
 }
 #about, #demarche {
     text-align: right;
@@ -76,6 +77,7 @@
 
 
 @media (min-width: 640px) {
+   
     #nav-content ul{
         font-size: 1.5rem;
 
@@ -90,6 +92,7 @@
 }
 
 @media (min-width:1024px) {
+
     #about-main {
         width: 80%;
         margin: 0 auto;
@@ -97,7 +100,7 @@
    .description-div-bloc {
        width: 50%;
        color: white;
-       padding: 50px 0 50px 0;
+       padding: 20px 0 20px 0;
        margin: 0;
     }
    #histoire {
@@ -173,12 +176,4 @@
     top: 0;
 }
 
-#about-main hr {
-    display: block;
-    background-color: rgb(116,34,37);
-    height: 2px;
-    width: 95%;    
-    margin: 0 auto;   
-    border:0px;
-}
 }
