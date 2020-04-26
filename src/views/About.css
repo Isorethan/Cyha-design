@@ -1,6 +1,7 @@
  #about-main {
     display: flex;
     flex-direction: column;
+    background-color: whitesmoke;
 }
 
 .title-description-about, #nav-content {
@@ -111,12 +112,14 @@
     #about-main {
         width: 80%;
         margin: 0 auto;
+        background-color: white;
     }
    .description-div-bloc {
        width: 50%;
        color: white;
        padding: 20px 0 20px 0;
        margin: 0;
+       border-radius: 15px;
     }
    #histoire {
        align-self: flex-end;
@@ -128,7 +131,6 @@
    #nav-content {
        padding: 20px;
        border-radius: 10px;
-       margin-top: 10px;
    }
 
    #nav-content li {
