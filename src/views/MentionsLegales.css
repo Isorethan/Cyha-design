@@ -2,3 +2,15 @@
     padding: 2rem;
     line-height: 1.6rem;
 }
+
+h3 {
+    background-color: rgba(34, 116, 113, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
