@@ -19,9 +19,16 @@ export default function NavBar() {
        window.open(t)
    }
 
+   let navClassName ;
+   if (window.innerWidth >1023){
+       navClassName="main-nav open" ;
+   }else {
+       navClassName ="main-nav";
+   }
+
     return (
         <Fragment>
-<nav className="main-nav" role="navigation">
+<nav className={navClassName} role="navigation">
             <ul className="nav-list">
                 <li className=" nav-top-tel" href="tel:+33699557404" onClick={openPhone}>06.99.55.74.04</li>
                 <NavLink to ="/about" onClick={showNav}   ><li className="nav-item">CYHA</li></NavLink>
