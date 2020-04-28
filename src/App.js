@@ -22,8 +22,7 @@ let App = () => {
                       <meta charSet="utf-8" />
                       <title>CYHA DESIGN Accueil</title>
                       <link rel="canonical" href="https://cyha-design.fr" />
-                      <meta name="description" content="Site internet de l'Agence CYHA DESIGN, CREATION ET CONFECTION EN DECORATION TEXTILE COUTURE - RETOUCHE - AMEUBLEMENT -VOILAGE -RIDEAUX
-SUR-MESURE A RENNES 06.99.55.74.04" />
+                      <meta name="description" content="Showroom d'Arts et Design spécialisé dans les tapisseries d'ameublement et la confection de textiles en décoration : CYHA DESIGN. Nous créons et confectionnons sur-mesure pour professionnels et particuliers des coussins d'intérieur et extérieur, des housses de canapés et banquettes, tapis, poufs, rideaux et voilages ainsi que des housses et voilages de bateau. Nous sommes créateurs d'ambiance et pouvons agencer et aménager la décoration de votre intérieur ou de vos espaces dédiés à un usage professionnel (bar, hôtel, restaurant...). Nous restaurons également les fauteuils, sièges et canapés." />
       </Helmet>
 
     </div>
