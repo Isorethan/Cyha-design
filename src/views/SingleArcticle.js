@@ -6,7 +6,7 @@ import Image from '../components/Image';
 import GalleryPhoto from './Gallery';
 import {Helmet} from "react-helmet";
 import BtnRetour from '../components/BtnRetour';
-
+import "@wordpress/block-library/build-style/style.css"
 
 
 
