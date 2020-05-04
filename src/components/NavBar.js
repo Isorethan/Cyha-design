@@ -19,16 +19,23 @@ export default function NavBar() {
        window.open(t)
    }
 
+   let navClassName ;
+   if (window.innerWidth >1023){
+       navClassName="main-nav open" ;
+   }else {
+       navClassName ="main-nav";
+   }
+
     return (
         <Fragment>
-<nav className="main-nav" role="navigation">
+<nav className={navClassName} role="navigation">
             <ul className="nav-list">
                 <li className=" nav-top-tel" href="tel:+33699557404" onClick={openPhone}>06.99.55.74.04</li>
-                <NavLink to ="/about" onClick={showNav}   ><li className="nav-item">CYHA</li></NavLink>
-                <NavLink to ="/atelier" onClick={showNav} ><li className="nav-item">REALISATIONS</li></NavLink>
-                <NavLink to ="/services"onClick={showNav} ><li className="nav-item">SERVICES</li></NavLink>
-                <NavLink to ="/articles"onClick={showNav} ><li className="nav-item">ACTUALITES</li></NavLink>
-                <NavLink to ="/contacts" onClick={showNav}><li className="nav-item">CONTACTS</li></NavLink>
+                <NavLink to ="/about/" onClick={showNav}   ><li className="nav-item">CYHA</li></NavLink>
+                <NavLink to ="/atelier/" onClick={showNav} ><li className="nav-item">REALISATIONS</li></NavLink>
+                <NavLink to ="/services/"onClick={showNav} ><li className="nav-item">SERVICES</li></NavLink>
+                <NavLink to ="/articles/"onClick={showNav} ><li className="nav-item">ACTUALITES</li></NavLink>
+                <NavLink to ="/contacts/" onClick={showNav}><li className="nav-item">CONTACTS</li></NavLink>
                 <span className="tel-nav" href="tel:+33699557404" onClick={openPhone}>06.99.55.74.04</span>
             </ul>
 </nav>

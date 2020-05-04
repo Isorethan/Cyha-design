@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-site-verification" content="8_xf34vbRFRppeHFEO1mF4a9afhTATWTm5lAzNPyeWM" />
     <meta name="theme-color" content="#000000" />
   
     <link rel="apple-touch-icon" href="<?php echo $TEMPLATE_PATH; ?>/logo192.png" />

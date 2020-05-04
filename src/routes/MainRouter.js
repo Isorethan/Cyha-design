@@ -33,12 +33,12 @@ render() {
                             <Accueil/>
                         </Route> 
 
-                        <Route exact path="/about">   
+                        <Route exact path="/about/">   
                             <About/>
                         </Route> 
 
 
-                        <Route exact path="/atelier">
+                        <Route exact path="/atelier/">
                            <Atelier />
                         </Route> 
 
@@ -48,22 +48,22 @@ render() {
                         
 
 
-                        <Route exact path="/services">
+                        <Route exact path="/services/">
                             <Services/>
                          </Route> 
 
-                        <Route exact path="/articles">
+                        <Route exact path="/articles/">
                         <Blog/>
                         </Route> 
 
                         <Route path="/articles/:slug" children={<SingleArcticle/>} />
                         
                         
-                        <Route exact path="/contacts">
+                        <Route exact path="/contacts/">
                         <Contact/>
                         </Route> 
 
-                        <Route exact path="/mentions-legales">
+                        <Route exact path="/mentions-legales/">
                                 <MentionsLegales />
                         </Route> 
                         
