@@ -69,4 +69,6 @@ font-size: 50px;
     list-style: none;
     text-decoration: none;
     margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
 }
