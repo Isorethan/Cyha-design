@@ -32,7 +32,7 @@
     display: none;
 }
 
-.react-photo-gallery--gallery {
+.single-article .react-photo-gallery--gallery {
     border: 1px solid lightgray;
     padding: 6px;
     background-color: white;
@@ -78,7 +78,7 @@
     }
 
    
-    .react-photo-gallery--gallery {
+    .single-article .react-photo-gallery--gallery {
         border: 1px solid lightgray;
         padding: 6px;
         background-color: white;
