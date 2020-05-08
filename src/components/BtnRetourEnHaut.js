@@ -1,10 +1,10 @@
 import React, {useState ,useEffect} from 'react'
 import "./BtnRetourEnHaut.css"
 export default function BtnRetourEnHaut () {
-    const [scrollPosition, setSrollPosition] = useState(0);
+    const [scrollPosition, setScrollPosition] = useState(0);
     const handleScroll = () => {
         const position = window.pageYOffset;
-        setSrollPosition(position);
+        setScrollPosition(position);
     };
     
     useEffect(() => {
