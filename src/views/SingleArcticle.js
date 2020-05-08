@@ -7,6 +7,7 @@ import GalleryPhoto from './Gallery';
 import {Helmet} from "react-helmet";
 import BtnRetour from '../components/BtnRetour';
 import "@wordpress/block-library/build-style/style.css"
+import BtnRetourEnHaut from '../components/BtnRetourEnHaut';
 
 
 
@@ -49,6 +50,7 @@ import "@wordpress/block-library/build-style/style.css"
         const date = new Date(article.date);
         return (
             <div className="single-article">
+                <BtnRetourEnHaut/>
                 <BtnRetour class="btn-retour-blog" link="/articles" description="Retour Aux Actualités" />  
                 <h1>{article.title.rendered}</h1>
                     {/* <p>{article.categories}</p> */}
