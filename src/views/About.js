@@ -11,7 +11,7 @@ export default function About() {
     return (
         
         <section id="about-main">
-            <BtnRetourEnHaut />
+
             <h1>
 
             </h1>

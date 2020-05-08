@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import MainRouter from './routes/MainRouter';
 import {Helmet} from "react-helmet";
+import BtnRetourEnHaut from './components/BtnRetourEnHaut';
 
 
 
@@ -16,6 +17,7 @@ let App = () => {
     <Router>
     <div className="App">
       <Header/>
+      <BtnRetourEnHaut/>
       <MainRouter/>
      
       <Helmet>
