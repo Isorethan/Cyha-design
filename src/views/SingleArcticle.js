@@ -10,6 +10,7 @@ import "@wordpress/block-library/build-style/style.css"
 
 
 
+
  export default ()  => {
   const[article, loadArticle] = useState(false);
   const [gallery, setGallery] = useState([]);
@@ -45,10 +46,11 @@ import "@wordpress/block-library/build-style/style.css"
 }
 
     if (article){
-        console.log(gallery)
+      
         const date = new Date(article.date);
         return (
             <div className="single-article">
+           
                 <BtnRetour class="btn-retour-blog" link="/articles" description="Retour Aux Actualités" />  
                 <h1>{article.title.rendered}</h1>
                     {/* <p>{article.categories}</p> */}
@@ -60,7 +62,7 @@ import "@wordpress/block-library/build-style/style.css"
                     </div> 
 
           
-                {(gallery !== []) ? <GalleryPhoto  photos={gallery} /> 
+                {(gallery !== []) ? <GalleryPhoto  photos={gallery} photosFull={gallery} /> 
                 :  
                  <Fragment>
                     <p className="loading-text">Loading...</p>
@@ -74,10 +76,10 @@ import "@wordpress/block-library/build-style/style.css"
                     <Helmet>
                       <meta charSet="utf-8" />
                         <title>CYHA DESIGN-{article.title.rendered}</title>
-                      
+                        <link rel="canonical" href={"https://cyha-design.fr/articles/"+slug+"/"} />
                       <meta name="description" content={article.excerpt.rendered} />
                     </Helmet>
-                    {console.log("return ended")}
+                 
                     
             </div>
         )

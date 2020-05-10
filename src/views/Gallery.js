@@ -34,7 +34,7 @@ useEffect(() => {
           <Modal onClose={closeLightbox}>
             <Carousel
               currentIndex={currentImage}
-              views={state.photos.map(photo => ({
+              views={state.photosFull.map(photo => ({
                 ...photo,
                 srcset: photo.srcSet,
                 caption: photo.title

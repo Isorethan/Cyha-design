@@ -14,7 +14,7 @@ const Article = (props) => {
            
             <Image id={featured_media} className="vignette-img" size='medium_large' />
             
-                <h4 className="title-article">{title.rendered}</h4>
+                <h4 className="title-article">{title.rendered.replace("&rsquo;", "'")}</h4>
                
         {/* <p dangerouslySetInnerHTML={
             {

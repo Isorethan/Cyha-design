@@ -1,7 +1,7 @@
 import React from 'react'
 import './About.css'
-import separator from '../assets/img/Groupe 49.svg'
 import {Helmet} from "react-helmet";
+
 
 export default function About() {
 
@@ -70,6 +70,7 @@ export default function About() {
                 Si la matière première provient essentiellement du Mali, la plupart des pièces sont fabriquées en France pour des raisons avant tout pratique et humaine.
                 </p>
                 <hr/>
+                
             </div>
             <Helmet>
                       <meta charSet="utf-8" />
