@@ -12,6 +12,10 @@
     margin: 5px;
 }
 
+.single-article >* {
+    margin: 5px;
+    max-width: 100%;
+}
 
 .single-article  .react-photo-gallery--gallery {
     width: 100%;
@@ -64,14 +68,18 @@
         margin:30px 0 30px 0;
     }
 
-    .single-article-img-featured {
-        width: 55%;
+    .single-article .article-img{
+        width: 75%;
         margin: 0 auto;
+    }
+
+    .article-content {
+          width: 65%;
     }
 
     .article-content p {
         font-size: 1.2em;
-        width: 65%;
+      
         margin: 0 auto;
        margin-top: 20px;
        margin-bottom: 20px;

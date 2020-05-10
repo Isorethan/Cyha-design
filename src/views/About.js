@@ -1,8 +1,7 @@
 import React from 'react'
 import './About.css'
-import separator from '../assets/img/Groupe 49.svg'
 import {Helmet} from "react-helmet";
-import BtnRetourEnHaut from '../components/BtnRetourEnHaut';
+
 
 export default function About() {
 

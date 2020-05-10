@@ -21,16 +21,10 @@ export default function BtnRetourEnHaut () {
         behavior: 'smooth'
       });
   }
-
-
-
-
-
-
-  
+ 
     return (
         (scrollPosition >200) ? <div id="backToTop" onClick={backTop} >
-             <i class="arrow up"></i>
+             <i className="arrow up"></i>
     </div>:null
        
     )

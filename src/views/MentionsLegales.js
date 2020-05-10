@@ -1,7 +1,6 @@
 import React from 'react';
 import './MentionsLegales.css';
 import {Helmet} from "react-helmet";
-import BtnRetourEnHaut from '../components/BtnRetourEnHaut';
 
 
 export default function MentionsLegales() {

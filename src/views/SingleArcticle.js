@@ -46,7 +46,7 @@ import "@wordpress/block-library/build-style/style.css"
 }
 
     if (article){
-        console.log(gallery)
+      
         const date = new Date(article.date);
         return (
             <div className="single-article">
@@ -62,7 +62,7 @@ import "@wordpress/block-library/build-style/style.css"
                     </div> 
 
           
-                {(gallery !== []) ? <GalleryPhoto  photos={gallery} /> 
+                {(gallery !== []) ? <GalleryPhoto  photos={gallery} photosFull={gallery} /> 
                 :  
                  <Fragment>
                     <p className="loading-text">Loading...</p>
@@ -76,10 +76,10 @@ import "@wordpress/block-library/build-style/style.css"
                     <Helmet>
                       <meta charSet="utf-8" />
                         <title>CYHA DESIGN-{article.title.rendered}</title>
-                      
+                        <link rel="canonical" href={"https://cyha-design.fr/articles/"+slug+"/"} />
                       <meta name="description" content={article.excerpt.rendered} />
                     </Helmet>
-                    {console.log("return ended")}
+                 
                     
             </div>
         )

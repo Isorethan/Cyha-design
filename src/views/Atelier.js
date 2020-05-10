@@ -11,6 +11,7 @@ import next from "../assets/img/FLECHEDROITE.svg"
 
 
 let photos ;
+let photosFull;
 function columns(containerWidth) {
     let columns = 1;
     if (containerWidth >= 500) columns = 2;
@@ -26,6 +27,7 @@ export default class Atelier extends Component {
             realisations:null,
             currentReal:null,
             photos:[],
+            photosFull:[],
             page:1
             
         }
@@ -126,18 +128,33 @@ initGallery=()=> {
               // handle err
           }else{
             photos= [];
+            photosFull = []
             data.map((image) =>  
+            
              photos.push({
-                 src:image.guid.rendered,
+                 src:image.media_details.sizes.medium.source_url,
+                //  srcSet:[image.media_details.sizes.medium.source_url,image.media_details.sizes.large.source_url,image.media_details.sizes.thumbnail.source_url,image.media_details.sizes.full.source_url],
                  width:4,
                  height:3,
-                 title:image.title.rendered
+                 alt:image.title.rendered
                  
 
-               })                   
+               })
+              
+                               
             )
+            
+            data.map((image) =>  
+            
+                photosFull.push({
+                src:image.media_details.sizes.full.source_url,
+                 alt:image.title.rendered
+               })   )
+            
+          
             t.setState({
                 photos:photos,
+                photosFull:photosFull,
                 page:currentPage,
                 totalPages:data._paging.totalPages
 
@@ -191,14 +208,14 @@ initGallery=()=> {
                
             
     render() {
-        let {realisations , currentReal,photos,page,totalPages} = this.state ;
+        let {realisations , currentReal,photos,page,totalPages,photosFull} = this.state ;
 
 
         return (
 
 
         <section id="atelier-container">
-            
+        {console.log(photos)}    
             <div className="atelier-container-one">      
         <h2 className="title-page-atelier">l' atelier de cyha</h2>
         <nav className="bloc-atelier-nav">
@@ -232,7 +249,7 @@ initGallery=()=> {
            
            {(photos) ?
            <Fragment>
-               <GalleryPhoto  photos={photos} direction="column" columns={columns}/>
+               <GalleryPhoto  photos={photos} photosFull={photosFull} direction="column" columns={columns}/>
                
              </Fragment>
         
