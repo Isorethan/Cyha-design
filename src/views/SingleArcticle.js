@@ -65,7 +65,7 @@ import "@wordpress/block-library/build-style/style.css"
                 {(gallery !== []) ? <GalleryPhoto  photos={gallery} photosFull={gallery} /> 
                 :  
                  <Fragment>
-                    <p className="loading-text">Loading...</p>
+                    <p className="loading-text">Chargement de l'article</p>
                     <div className="spinner">
                         <div className="cube1"></div>
                         <div className="cube2"></div>

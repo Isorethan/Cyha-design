@@ -215,7 +215,7 @@ chooseCategorie = (e) => {
                              </Fragment>
                 :
                 <Fragment>
-                <p className="loading-text">Loading...</p>
+                <p className="loading-text">Chargement des articles</p>
                 <div className="spinner">
                    <div className="cube1"></div>
                     <div className="cube2"></div>
