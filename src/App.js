@@ -10,9 +10,6 @@ import BtnRetourEnHaut from './components/BtnRetourEnHaut';
 
 let App = () => {
 
-/* je suis un commentaire de Marie, je suis mignon et sympathique, j'aime beaucoup les carottes*/
-/** Je suis un commentaire aussi que Marie peu lire */
-
   return (
     <Router>
     <div className="App">
