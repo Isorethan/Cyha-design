@@ -1,7 +1,7 @@
 import React from 'react' ;
 import NavBar from './NavBar' ;
 import './Header.css' ;
-import logo from '../assets/img/logo_blanc.svg' ;
+import logo from '../assets/img/LOGO.png' ;
 
 import {Link, useLocation} from "react-router-dom";
 
