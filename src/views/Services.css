@@ -88,10 +88,14 @@
 }
 
 .services-img-container {
-    width: 100%;
     height: auto;
     align-self: center;
     position: relative;
+    border: 1px solid lightgray;
+    padding: 6px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 5px 5px rgba(34, 116, 113, 0.6);
 }
 
 .services-img {
@@ -171,13 +175,12 @@
 }
 
 .services-img-container {
-    width: 100%;
+    width: 60%;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .services-img {
-    width: 60%;
     max-height: 400px;
     text-align: center;
 }
@@ -222,7 +225,6 @@
 
 @media (min-width:1200px) {
     .services-img {
-        width: 40%;
         max-height: 550px;
     }
   
