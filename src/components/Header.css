@@ -15,9 +15,7 @@
 }
 
 #logo {
-    width: 300px;
-    max-width: 45vw;
-    max-height: 95%;
+    max-height: 90px;
     align-self: center;
     display: block;
     
@@ -39,6 +37,10 @@
 
     .header {
         height: 125px;
+    }
+
+    #logo {
+        max-height: 120px;
     }
 
 }
