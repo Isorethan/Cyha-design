@@ -33,9 +33,6 @@ export default function About() {
                 prendrons les mesures avec vous.
                 </p>
                 <hr/>
-                {/* <div className="horizontal-separator"> 
-                    <img className="dotes-separator" src={separator} alt="" />
-                </div> */}
             </div>
           
             
@@ -49,11 +46,8 @@ export default function About() {
                 Le coton local cultivé, tissé et teinté par les braves cultivateurs, tisserands et teinturières locaux certifie l’authenticité des produits.
                 </p>
                 <hr/>
-                {/* <div className="horizontal-separator">
-                    <img className="dotes-separator" src={separator} alt="" />
-                </div> */}
             </div>
-           
+
 
             <div id="demarche" className="description-div-bloc">
                 <hr/>
@@ -64,9 +58,9 @@ export default function About() {
                 leurs conditions de travail et que la fabrication des produits est en accord avec la démarche de la marque.
                 Si la matière première provient essentiellement du Mali, la plupart des pièces sont fabriquées en France pour des raisons avant tout pratique et humaine.
                 </p>
-                <hr/>
-                
+                <hr/> 
             </div>
+
             <Helmet>
                       <meta charSet="utf-8" />
                       <title>CYHA DESIGN Qui sommes nous</title>

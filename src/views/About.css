@@ -52,9 +52,7 @@
     margin-top: 20px;
 
 }
-#about, #histoire {
-    position: relative;
-}
+
 #demarche {
     color: rgb(116,34,37);
  }
@@ -66,9 +64,43 @@
     color: white;
 }
 
-
 #about-main hr {
     display:none
+}
+
+#about, #histoire, #demarche {
+    position: relative;
+}
+
+#about::after {
+    content: "";
+    background-image: url(../assets/img/quisommesnous2.JPG);
+    background-size: cover;
+    height: 250px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 8px;
+
+}
+
+#histoire::after {
+    content: "";
+    background-image: url(../assets/img/notrehistoire.PNG);
+    background-size: cover;
+    height: 250px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+#demarche::after {
+    content: "";
+    background-image: url(../assets/img/demarche.JPG);
+    background-size: cover;
+    height: 250px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 8px;
 }
 
 
@@ -104,10 +136,7 @@
    #histoire {
        align-self: flex-end;
    }
-   .horizontal-separator {
-       display: none;
-   }
-
+  
    #nav-content {
        padding: 20px;
        border-radius: 10px;
@@ -142,6 +171,8 @@
     height: 100%;
     position: absolute;
     top: 0;
+    display: inline-block;
+    margin-top: 0px;
 }
 
 #histoire::after {
@@ -152,6 +183,7 @@
     height: 100%;
     position: absolute;
     top: 0;
+    margin-top: 0px;
     left: -100%;
 }
 
@@ -163,6 +195,8 @@
     height: 100%;
     position: absolute;
     top: 0;
+    display: inline-block;
+     margin-top: 0px;
 }
 
 }
