@@ -136,7 +136,7 @@
 
 #about::after {
     content: "";
-    background-image: url(../assets/img/pilecoussin_01.jpg);
+    background-image: url(../assets/img/quisommesnous2.JPG);
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -146,7 +146,7 @@
 
 #histoire::after {
     content: "";
-    background-image: url(../assets/img/pilecoussin_01.jpg);
+    background-image: url(../assets/img/notrehistoire.PNG);
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -157,7 +157,7 @@
 
 #demarche::after {
     content: "";
-    background-image: url(../assets/img/pilecoussin_01.jpg);
+    background-image: url(../assets/img/demarche.JPG);
     background-size: cover;
     width: 100%;
     height: 100%;
