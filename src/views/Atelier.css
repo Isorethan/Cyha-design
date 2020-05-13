@@ -8,23 +8,23 @@
     width: 100%;
 }
 
-/* width */
-::-webkit-scrollbar {
+ /*  width */
+.img-atelier-bloc::-webkit-scrollbar {
     width: 10px;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+   /* Track */
+  .img-atelier-bloc::-webkit-scrollbar-track {
     background: lightblue;
   }
   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+   /* Handle  */
+  .img-atelier-bloc::-webkit-scrollbar-thumb {
     background: #888;
   }
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+ /* Handle on hover  */
+  .img-atelier-bloc::-webkit-scrollbar-thumb:hover {
     background: #555;       
      }
 
@@ -167,6 +167,7 @@
 
 
 @media (min-width:640px)  {
+
 
     .title-page-atelier {
         margin-bottom: 25px;

@@ -13,7 +13,9 @@
 body {
   background-color: whitesmoke;
   font-family: 'Lato';
-
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 a {
   text-decoration: none;
@@ -84,4 +86,23 @@ section {
     transform: rotate(-360deg);
     -webkit-transform: rotate(-360deg);
   }
+}
+
+@media (min-width:640px) {
+  body::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+    background-color: gray;
+  }
+
+   /* Track */
+   body::-webkit-scrollbar-track {
+    background: lightblue;
+  }
+  
+   /* Handle  */
+  body::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
 }

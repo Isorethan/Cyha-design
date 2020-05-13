@@ -72,20 +72,20 @@ return(
         </nav>
         {(services[0])?<div id="services-container">
             <div id="services-description">
-                <h3 className="services-title">{services[0].acf.titre_du_service}</h3>
+                <h2 className="services-title">{services[0].acf.titre_du_service}</h2>
                 <p className="services-text">
                 {services[0].acf.description_du_service}
                 </p>
-                <p className="services-postal-info">
+                <div className="services-img-container"> <img src={services[0].acf.image_du_service.url} alt="Services" className="services-img"/> </div>
+            </div>
+           
+            <p className="services-postal-info">
                     Pour toutes demandes d'information : <br/>
                     CYHA DESIGN <br/>
                     77, Avenue Aristide Briand <br/>
                     35000 Rennes <br/>
                     06.99.55.74.04 <br/>
                 </p>
-            </div>
-            <div className="services-img-container"> <img src={services[0].acf.image_du_service.url} alt="Services" className="services-img"/> </div>
-
         </div> :    <Fragment>
         <h1 className="loading-text">Chargement du services</h1>
         <div className="spinner">

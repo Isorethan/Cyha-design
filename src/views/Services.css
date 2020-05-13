@@ -71,18 +71,6 @@
     font-size: 1rem;
     line-height: 28px;
 }
-
-
-.services-img-container::before{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    opacity: 0.2;
-    position: absolute;
-}
-/* ----------------- BLOC MODFIE -----------------*/
-
 .services-text {
     text-align: center;
 }
@@ -105,7 +93,8 @@
 
 .services-postal-info {
     text-align: center;
-    margin-top: 5px;
+    margin-bottom: 20px;
+
 }
 
 @media (min-width:600px) {
@@ -152,6 +141,7 @@
     display: flex;
     flex-direction: column;
     align-self: self-end;
+    margin-bottom: 20px;
 }
 
 #services-description::after{
@@ -165,7 +155,6 @@
 }
 .services-postal-info {
     font-size: 1.2rem;
-    margin-top: 75px; /* poussé de la moitié de hauteur de viewport */
 }
 
 

@@ -10,11 +10,6 @@ export default function About() {
     return (
         
         <section id="about-main">
-
-            <h1>
-
-            </h1>
-
        <nav id="nav-content">
                 <ul>
                     <a href="#about"><li>qui sommes-nous ?</li></a>

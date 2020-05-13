@@ -66,26 +66,6 @@
     color: white;
 }
 
-/* .horizontal-separator div {
-    width: 100%;
-    height: 100%;
-}
-.dotes-separator {
-    transform: rotate(-45deg);
-}
-
-.horizontal-separator {
-    width: 150px;
-    height: 150px;
-    background-color: rgba(103, 124, 167, 44%);
-    display: flex;
-    justify-content: center;
-    transform: rotate(45deg);
-    text-align: center;
-    position: absolute;
-    left: calc(50% - 75px);
-    
-} */
 
 #about-main hr {
     display:none
