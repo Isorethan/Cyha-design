@@ -8,8 +8,10 @@
     overflow: hidden;
   
 }
-/* -------------- BLOC MODIFIE -------------*/
 
+#accueil strong {
+    font-weight: 300;
+}
 #accueil::after {
     content: ' ';
     display: block;
@@ -35,7 +37,7 @@
     text-align: center;
     overflow: hidden;
     padding: 5px;
-    border: 4px solid white;
+    border: 2px solid white;
     background-color: rgba(0, 0, 0, 0.7);
     margin: 0 auto;
     
@@ -53,6 +55,8 @@
     .accueil-text {
         width: 50%;
         line-height: 35px;
+        font-size: 20px;
+        padding: 10px;
         
     }
 
