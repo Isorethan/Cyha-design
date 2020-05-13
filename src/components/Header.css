@@ -15,9 +15,9 @@
 }
 
 #logo {
-    max-height: 90px;
     align-self: center;
     display: block;
+    max-width: 65%;
     
 }
 
@@ -38,11 +38,6 @@
     .header {
         height: 125px;
     }
-
-    #logo {
-        max-height: 120px;
-    }
-
 }
 
 @media (min-width:1024px) { 
