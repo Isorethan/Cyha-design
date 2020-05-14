@@ -276,7 +276,7 @@ initGallery=()=> {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>CYHA DESIGN Réalisations</title>
-                <link rel="canonical" href="https://cyha-design.fr/realisations/" />
+                <link rel="canonical" href="https://cyha-design.fr/atelier/" />
                 <meta name="description" content="Réalisations de CYHA DESIGN , photos et descriptions" />
             </Helmet>
         </section>
