@@ -21,7 +21,7 @@ export default function Header() {
     return (
         <header className={headerClass}>
           <Link className="logo-link" to="/" > 
-            <img src={logo} alt="CYHA DESIGN" id="logo"/>
+            <img src={logo} alt="CYHA DESIGN" id="logo" loading='lazy'/>
           </Link>
          <NavBar />
       

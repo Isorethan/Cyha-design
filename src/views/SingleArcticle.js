@@ -27,6 +27,7 @@ import "@wordpress/block-library/build-style/style.css"
             src:img.dataset["fullUrl"],
             width:4,
             height:3,
+            loading:'lazy'
            })
         )
             setGallery(photos)
@@ -55,7 +56,7 @@ import "@wordpress/block-library/build-style/style.css"
                 <h1>{article.title.rendered}</h1>
                     {/* <p>{article.categories}</p> */}
                     <p>{ `${date.getDay()}/${date.getMonth()+1}/${date.getFullYear()} à ${date.getHours()}:${date.getMinutes()}`}</p>
-                    <Image id={article.featured_media} className="vignette-img" size='full'  />                    
+                    <Image loading='lazy' id={article.featured_media} className="vignette-img" size='full'  />                    
                     <div className="article-content" dangerouslySetInnerHTML={{
                         __html: article.content.rendered.replace(/<script(.)*<\/script>/gm, '')
                     }}>

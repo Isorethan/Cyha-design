@@ -37,7 +37,8 @@ useEffect(() => {
               views={state.photosFull.map(photo => ({
                 ...photo,
                 srcset: photo.srcSet,
-                caption: photo.title
+                caption: photo.title,
+                loading:"lazy"
               }))}
              
 

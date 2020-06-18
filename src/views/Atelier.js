@@ -136,7 +136,9 @@ initGallery=()=> {
                 //  srcSet:[image.media_details.sizes.medium.source_url,image.media_details.sizes.large.source_url,image.media_details.sizes.thumbnail.source_url,image.media_details.sizes.full.source_url],
                  width:4,
                  height:3,
-                 alt:image.title.rendered
+                 alt:image.title.rendered,
+                 loading:'lazy'
+
                  
 
                })
@@ -148,7 +150,8 @@ initGallery=()=> {
             
                 photosFull.push({
                 src:image.media_details.sizes.full.source_url,
-                 alt:image.title.rendered
+                 alt:image.title.rendered,
+                 loading:'lazy'
                })   )
             
           

@@ -12,7 +12,7 @@ const Article = (props) => {
             <Link className="link-article"to={'/articles/' + slug}> 
             <div className="overlay"></div>  
            
-            <Image id={featured_media} className="vignette-img" size='medium_large' />
+            <Image loading='lazy' id={featured_media} className="vignette-img" size='medium_large' />
             
                 <h4 className="title-article">{title.rendered.replace("&rsquo;", "'")}</h4>
                
