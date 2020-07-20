@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {
         "@devloco/react-scripts-wptheme": "^3.4.0-wp.11",
-        "@wordpress/block-library": "^2.18.0",
+        "@wordpress/block-library": "^2.22.2",
         "create-react-wptheme": "^3.4.0-wp.9",
         "google-maps-react": "^2.0.6",
         "react": "^16.13.1",
