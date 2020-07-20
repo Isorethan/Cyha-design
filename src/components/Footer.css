@@ -15,13 +15,18 @@
 }
 
 .social-media-container > a{
- width: fit-content;
+ width: 60px;
 }
 
 
 .social-media-item {
-    max-height: 100%;
+    height: 100%;
     margin: 0 15px;
+}
+
+
+.social-media-link {
+    width: 50px;
 }
 
 .mentions-link {

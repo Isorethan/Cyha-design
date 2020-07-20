@@ -16,8 +16,12 @@ export default function Footer() {
 
 
         <div className="social-media-container"> 
-            <a href="https://www.facebook.com/cyhadesign/" target="_blank" rel="noopener noreferrer"> <img className="social-media-item" src={facebook} alt="facebook" /></a>  
-            <a href="https://www.instagram.com/cyhadesign/ " target="_blank" rel="noopener noreferrer"><img className="social-media-item" src={instagram} alt="instagram" />  </a>  
+            <a href="https://www.facebook.com/cyhadesign/" target="_blank" rel="noopener noreferrer" className="social-media-link"> 
+                <img className="social-media-item" src={facebook} alt="facebook" />
+            </a>  
+            <a href="https://www.instagram.com/cyhadesign/ " target="_blank" rel="noopener noreferrer" className="social-media-link">
+                <img className="social-media-item" src={instagram} alt="instagram" />  
+            </a>  
         </div>
         <Link className="mentions-link" to="/mentions-legales/">Mentions Légales</Link>
         </footer>  )
