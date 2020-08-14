@@ -1,0 +1,202 @@
+ #about-main {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+
+.title-description-about, #nav-content {
+    text-transform: uppercase;
+}
+
+#nav-content {
+    background-color: rgba(34, 116, 113, 0.6);
+}
+#nav-content ul{
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 20px 0;
+}
+
+#nav-content a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+#nav-content a:active{
+    border-bottom: 1px solid black;
+}
+
+.description-div-bloc{
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1.1em;
+}
+#about, #demarche {
+    text-align: right;
+}
+.title-description-about {
+    border-bottom: 1px solid rgb(116,34,37);
+    font-size: 1.3rem;
+    font-weight: 200;
+    padding: 5px;
+}
+
+.description-div-bloc p {
+    line-height: 25px;
+    margin-top: 20px;
+
+}
+
+#demarche {
+    color: rgb(116,34,37);
+ }
+ #about {
+    color:rgb(116,34,37);
+}
+#histoire {
+    background-color:rgb(116,34,37);
+    color: white;
+}
+
+#about-main hr {
+    display:none
+}
+
+#about, #histoire, #demarche {
+    position: relative;
+}
+
+#about::after {
+    content: "";
+    background-image: url(../assets/img/quisommesnous2.JPG);
+    background-size: cover;
+    height: 250px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 8px;
+
+}
+
+#histoire::after {
+    content: "";
+    background-image: url(../assets/img/notrehistoire.PNG);
+    background-size: cover;
+    height: 250px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+#demarche::after {
+    content: "";
+    background-image: url(../assets/img/demarche.JPG);
+    background-size: cover;
+    height: 250px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+
+@media (min-width: 640px) {
+   
+    #nav-content ul{
+        font-size: 1.5rem;
+
+    }
+    .description-div-bloc p {
+        font-size: 1.5rem;
+    }
+    .title-description-about {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (min-width:1024px) {
+
+    #about-main {
+        width: 80%;
+        margin: 0 auto;
+        background-color: white;
+    }
+   .description-div-bloc {
+       width: 50%;
+       color: white;
+       padding: 20px 0 20px 0;
+       margin: 0;
+       border-radius: 15px;
+    }
+   #histoire {
+       align-self: flex-end;
+   }
+  
+   #nav-content {
+       padding: 20px;
+       border-radius: 10px;
+   }
+
+   #nav-content li {
+       font-size: 1.8rem;
+   }
+   .description-div-bloc p {
+    text-align: justify;
+    line-height: 35px;
+    font-size: 1.3em;
+    padding: 0  45px 75px 45px;
+
+}
+ .title-description-about{
+    padding : 30px 0 30px 0;
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+#about, #histoire, #demarche {
+    position: relative;
+}
+
+#about::after {
+    content: "";
+    background-image: url(../assets/img/quisommesnous2.JPG);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    margin-top: 0px;
+}
+
+#histoire::after {
+    content: "";
+    background-image: url(../assets/img/notrehistoire.PNG);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 0px;
+    left: -100%;
+}
+
+#demarche::after {
+    content: "";
+    background-image: url(../assets/img/demarche.JPG);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+     margin-top: 0px;
+}
+
+}

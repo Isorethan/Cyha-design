@@ -1,0 +1,65 @@
+#accueil {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../assets/img/backgroundMobile.jpeg);
+    background-size: cover;
+    overflow: hidden;
+  
+}
+
+#accueil strong {
+    font-weight: 300;
+}
+#accueil::after {
+    content: ' ';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+
+.accueil-text {
+    top:40%;
+    position: relative;
+    color: white;
+    width: 75%;
+    max-height: 300px;
+    font-size: 15px;
+    line-height: 25px;
+    z-index: 2;
+    text-align: center;
+    overflow: hidden;
+    padding: 5px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    
+}
+
+
+@media (min-width: 1024px) {
+
+    #accueil {
+        
+        background-image: url(../assets/img/unnamed.jpg);
+    }
+
+
+    .accueil-text {
+        width: 50%;
+        line-height: 35px;
+        font-size: 20px;
+        padding: 10px;
+        
+    }
+
+}
+
+

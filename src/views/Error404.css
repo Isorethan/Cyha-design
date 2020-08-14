@@ -1,0 +1,101 @@
+#error404 {
+    text-align: center;
+    height: 100%;
+}
+
+#errorInfo{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.errorTitle {
+    text-transform: uppercase;
+    font-size: 35px;
+    position: relative;
+}
+
+.errorTitle::before {
+    content: '404';
+    position: absolute;
+    font-size: 100px;
+    color: #e5e5f8;
+    font-weight: 600;
+    z-index: -1;
+    top: 60%;
+    left: 25%;
+}
+
+.errorSubtitle {
+    margin-bottom: 50px;
+}
+
+.back-btn {
+    display: block;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: 15px;
+    color: #8181dd;
+    background-color: #e5e5f8;
+    width: fit-content;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+}
+
+
+@media (min-width:1024px) {
+    #error404 {
+        margin-top: 50px;
+    }
+    .errorTitle {
+        border-bottom: none;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 115px 0;
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+        opacity: .8;
+        letter-spacing: 3px;
+        font-size: 75px;
+        font-weight: 700;
+    }
+
+    .errorTitle::before {
+        content: "404";
+        top: 0;
+        left: 50%;
+        position: absolute;
+        color: rgba(66, 66, 91,.75);
+        font-size: 400px;
+        line-height: 320px;
+        font-weight: 700;
+        transform: translateX(-50%);
+        }
+
+        .back-btn {
+            margin-top: 50px;
+            font-size: 25px;
+            padding: 15px;
+        }
+}
+
+
+@media only screen and (device-width:1024px) {
+
+    .errorSubtitle {
+        font-size: 35px;
+    }
+    
+    .back-btn {
+        margin-top: 75px;
+        font-size: 35px;
+        padding: 30px;
+        color: #8181dd;
+    }
+
+}

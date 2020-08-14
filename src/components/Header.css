@@ -1,0 +1,52 @@
+.header-home {
+    display: flex;
+    height: 90px;
+    background-color:transparent;
+    min-width: 100%;
+    z-index: 200;
+  
+}
+
+.header{
+    display: flex;
+    height: 90px;
+    background-image: url(../assets/img/black-wooden-plank.jpg);
+    min-width: 100%;
+}
+
+#logo {
+    align-self: center;
+    display: block;
+    max-width: 65%;
+    
+}
+
+.logo-link {
+    display: block;
+   align-self: center;
+   margin-left: .9vw;
+   width: 300px;
+   max-width: 45vw;
+    
+}
+
+@media (min-width: 640px) { 
+    .header-home {
+        height: 125px;
+    }
+
+    .header {
+        height: 125px;
+    }
+}
+
+@media (min-width:1024px) { 
+.header-home {
+    height: 125px;
+}
+.header {
+    height: 125px;
+}
+
+}
+

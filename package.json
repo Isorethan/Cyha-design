@@ -1,0 +1,46 @@
+{
+    "name": "cyha-design",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@devloco/react-scripts-wptheme": "^3.4.0-wp.11",
+        "@wordpress/block-library": "^2.22.6",
+        "create-react-wptheme": "^3.4.0-wp.9",
+        "google-maps-react": "^2.0.6",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-helmet": "^5.2.1",
+        "react-images": "^1.1.7",
+        "react-photo-gallery": "^8.0.0",
+        "react-router-dom": "^5.2.0",
+        "webfontloader": "^1.6.28",
+        "wpapi": "^1.2.1"
+    },
+    "scripts": {
+        "crabuild": "react-scripts build",
+        "craeject": "react-scripts eject",
+        "crastart": "react-scripts start",
+        "cratest": "react-scripts test",
+        "build": "wptheme-scripts build",
+        "start": "wptheme-scripts start",
+        "wpbuild": "wptheme-scripts wpbuild",
+        "wpstart": "wptheme-scripts wpstart"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "homepage": "/wp-content/themes/cyha-design/",
+    "browserLaunchTo": "http://cyha-design.test/"
+}
